@@ -16,8 +16,3 @@ npm run dev
 npm run build    # Output: folder out/
 npm start        # Jalankan hasil build
 ```
-
-## Panduan
-
-- **Mengubah konten website** → [EDIT-KONTEN.md](./EDIT-KONTEN.md)
-- **Catatan demo / presentasi** → [DEMO-NOTES.md](./DEMO-NOTES.md)
