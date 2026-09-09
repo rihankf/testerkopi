@@ -2,7 +2,7 @@
  * HALAMAN DETAIL PRODUK — /product/[slug]
  * Dynamic route untuk menampilkan detail setiap alat teknologi.
  * Menggunakan generateStaticParams() untuk pre-render semua slug produk.
- * Menampilkan: hero, problem statement, deskripsi + spesifikasi teknis, alat lainnya.
+ * Menampilkan: hero, problem statement, deskripsi + spesifikasi, alat lainnya.
  * Data comparisons (perbandingan harga) tersedia tapi belum ditampilkan di UI.
  */
 import Image from "next/image";
@@ -90,7 +90,7 @@ export default async function ToolPage({
             <h2>Deskripsi Alat</h2>
             <p className="lead">{tool.description}</p>
             {/* Spesifikasi digabung di bawahnya */}
-            <h3 className="detail-subtitle" style={{ marginTop: "30px", marginBottom: "15px" }}>Spesifikasi Teknis</h3>
+            <h3 className="detail-subtitle" style={{ marginTop: "30px", marginBottom: "15px" }}>Spesifikasi</h3>
             <div className="specs-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "15px" }}>
               {tool.specs.map((s, i) => (
                 <div className="spec-item" key={i} style={{ padding: "15px", border: "1px solid var(--border)", borderRadius: "8px", background: "var(--cream)" }}>

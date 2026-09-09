@@ -6,7 +6,7 @@ import type { Tool } from "@/types";
 // Setiap alat memiliki:
 //   - problem    : masalah yang diselesaikan
 //   - description: deskripsi solusi
-//   - specs      : spesifikasi teknis
+//   - specs      : spesifikasi
 //   - comparisons: perbandingan harga antar brand (untuk PriceComparisonTable)
 //   - researcher : nama peneliti yang bertanggung jawab
 //

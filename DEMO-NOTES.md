@@ -156,7 +156,7 @@ alat-kopi/
 **Yang ditampilkan:**
 1. **Hero** — Gambar full-width + overlay + nama alat + range harga
 2. **Problem Statement** — Masalah yang diselesaikan oleh alat ini
-3. **Deskripsi + Spesifikasi** — Penjelasan alat + grid spesifikasi teknis
+3. **Deskripsi + Spesifikasi** — Penjelasan alat + grid spesifikasi
 4. **Alat Lainnya** — Link ke produk lain
 
 ---
