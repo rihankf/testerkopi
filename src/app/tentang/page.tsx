@@ -26,7 +26,7 @@ export default function TentangPage() {
               title="Rangkuman Masalah"
             />
             <p className="problems-subtitle" style={{ textAlign: "center", margin: "20px auto 30px", maxWidth: "900px", lineHeight: 1.8 }}>
-              Berdasarkan observasi pada rantai pengolahan pascapanen kopi, kendala utama yang menghambat petani dalam mencapai kualitas dan harga jual optimal terpusat pada tiga aspek yaitu proses pengeringan yang sangat bergantung pada cuaca, keterbatasan alat ukur kadar air yang presisi dan terjangkau, serta metode pemilahan biji kopi yang masih kurang efektif baik pada sistem basah maupun kering.
+              Berdasarkan observasi pada rantai pengolahan pascapanen kopi, kendala utama yang menghambat petani dalam mencapai kualitas dan harga jual optimal terpusat pada tiga aspek yaitu proses pengeringan yang sangat bergantung pada cuaca, keterbatasan alat ukur kadar air yang presisi dan terjangkau, serta metode pemilahan biji kopi yang masih kurang baik pada sistem basah maupun kering.
             </p>
             <div className="timeline" style={{ gridTemplateColumns: "repeat(3, 1fr)", marginTop: "30px", marginBottom: "40px" }}>
               <div className="timeline-line" style={{ left: "16.66%", right: "16.66%" }} />
@@ -95,7 +95,7 @@ export default function TentangPage() {
                   Padahal, kopi Arabika <i>specialty grade</i> bisa mencapai Rp 80.000–150.000/kg di level <i>green bean</i>.
                 </p>
                 <p>
-                  <strong>Masalah utama</strong> yang kami identifikasi adalah pada proses pascapanen — pengeringan
+                  <strong>Masalah utama</strong> yang kami identifikasi adalah pada proses pascapanen, pengeringan
                   tidak merata, sortasi manual yang lambat dan inkonsisten, serta tidak adanya kontrol kadar air
                   yang akurat. Akibatnya, kualitas biji kopi menjadi tidak konsisten dan gagal memenuhi
                   standar ekspor.

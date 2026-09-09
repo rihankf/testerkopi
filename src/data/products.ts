@@ -161,7 +161,7 @@ export const tools: Tool[] = [
     "category": "Pengeringan",
     "image": "/images/Pengering4.jpeg",
     "problem": "Banyak mesin rotary dryer memiliki harga yang sangat mahal, sehingga sulit dijangkau oleh pengolah kopi pemula atau UMKM kecil yang butuh pengering mekanis.",
-    "description": "Mesin rotary dryer ekonomis berkapasitas 100 kg dengan material body Besi Baja. Didesain secara fungsional menggunakan burner LPG dan blower, dilengkapi panel kontrol suhu digital sederhana untuk pengeringan kopi efektif.",
+    "description": "Mesin rotary dryer ekonomis berkapasitas 100 kg dengan material body Besi Baja. Didesain secara fungsional menggunakan burner LPG dan blower, dilengkapi panel kontrol suhu digital sederhana untuk pengeringan kopi.",
     "priceRange": "Rp 20.727.400",
     "features": [
       "Harga lebih terjangkau untuk kapasitas 100 kg",
@@ -618,6 +618,236 @@ export const tools: Tool[] = [
         "priceValue": 350000,
         "origin": "Impor",
         "notes": "Sudah dilengkapi koneksi Bluetooth/WiFi untuk pantau lewat HP."
+      }
+    ]
+  },
+  {
+    "slug": "mesin-sortasi-ai-wesort",
+    "name": "Mesin Sortasi berbasis AI",
+    "category": "Pemilahan",
+    "image": "/images/Pemilah1.jpeg",
+    "problem": "Biji kopi berkualitas baik dan rendah/cacat masih sulit dipisahkan pada proses pascapanen.",
+    "description": "Optical color sorting menggunakan kamera CCD Full Color dan sistem pneumatic ejector (hembusan udara bertekanan) untuk memisahkan biji kopi berdasarkan warna antara biji diterima (accept) dan ditolak (reject). AI Smart Coffee Color Sorter dengan CCD Full Color Camera mendeteksi warna biji kopi dari sisi depan dan belakang.",
+    "priceRange": "Rp 9.960.000",
+    "features": [
+      "Deteksi warna, bentuk, dan cacat visual",
+      "Kamera CCD Full Color depan dan belakang",
+      "Sistem pneumatic ejector",
+      "Akurasi >= 99%"
+    ],
+    "specs": [
+      {
+        "label": "Tipe",
+        "value": "6SXZ-136, 2 Chute"
+      },
+      {
+        "label": "Kapasitas",
+        "value": "800-2000 kg/h"
+      },
+      {
+        "label": "Daya",
+        "value": "2,7 kW"
+      },
+      {
+        "label": "Dimensi",
+        "value": "1837 x 5883 x 2149 mm"
+      }
+    ],
+    "justification": "Mengotomatisasi penyortiran visual dengan tingkat akurasi tinggi dan kapasitas besar.",
+    "recommendation": "Sangat direkomendasikan untuk pabrik pengolahan skala besar.",
+    "researcher": "Tim Peneliti",
+    "comparisons": [
+      {
+        "name": "S1LH128-IA",
+        "brand": "WESORT",
+        "price": "Rp 9.960.000",
+        "priceValue": 9960000,
+        "origin": "China",
+        "notes": "Memerlukan udara bertekanan < 4000L/min (0,4-0,6 Mpa)."
+      }
+    ]
+  },
+  {
+    "slug": "mesin-sortasi-loadcell-zonesun",
+    "name": "Mesin Sortasi berbasis load cell dan sensor fotoelektrik",
+    "category": "Pemilahan",
+    "image": "/images/Pemilah2.jpg",
+    "problem": "Mesin sortasi yang beredar umumnya menggunakan parameter warna/bentuk, sedangkan teknologi sortasi berdasarkan densitas/berat jenis masih terbatas.",
+    "description": "Dynamic checkweighing menggunakan high-precision load cell dan sensor fotoelektrik untuk mendeteksi dan menimbang produk secara otomatis saat bergerak pada konveyor, kemudian mengklasifikasikan produk berdasarkan rentang berat yang telah ditentukan. Menggunakan ZONESUN ZS-MD210-6.",
+    "priceRange": "Rp 132.199.637",
+    "features": [
+      "Sortasi berdasarkan berat biji kopi",
+      "High-precision load cell & sensor fotoelektrik",
+      "Konveyor berkecepatan tinggi",
+      "Touchscreen control & automatic rejection mechanism"
+    ],
+    "specs": [
+      {
+        "label": "Kapasitas",
+        "value": "100-300 kemasan/menit"
+      },
+      {
+        "label": "Rentang Penimbangan",
+        "value": "3-1000 g"
+      },
+      {
+        "label": "Interval Skala",
+        "value": "0,1 g"
+      },
+      {
+        "label": "Pengelompokkan",
+        "value": "3-16 kelompok"
+      }
+    ],
+    "justification": "Sortasi berdasarkan berat memberikan pemilahan tingkat lanjut yang tidak hanya bertumpu pada visual.",
+    "recommendation": "Mesin ini sangat berpotensi dikembangkan dengan mengintegrasikan teknologi pengukuran volume untuk memperoleh parameter densitas.",
+    "researcher": "Tim Peneliti",
+    "comparisons": [
+      {
+        "name": "ZS-MD210-6",
+        "brand": "ZONESUN",
+        "price": "Rp 132.199.637,70",
+        "priceValue": 132199637,
+        "origin": "China",
+        "notes": "Berat mesin ±274 kg. Daya AC 220 V."
+      }
+    ]
+  },
+  {
+    "slug": "mini-color-sorter-topsort",
+    "name": "Mesin Mini Coffee Bean Color Sorter",
+    "category": "Pemilahan",
+    "image": "/images/Pemilah3.jpg",
+    "problem": "Pemilahan manual tidak konsisten dan lambat. Mesin sortasi ukuran besar terlalu memakan tempat untuk industri skala kecil.",
+    "description": "Pemisahan biji berdasarkan perbedaan warna, bentuk, ukuran, dan material/cacat visual menggunakan sistem optik. Biji yang tidak sesuai dipisahkan dengan semburan udara bertekanan. Menggunakan high-speed FPGA digital image processing dan AI self-learning.",
+    "priceRange": "Tidak tercantum",
+    "features": [
+      "Deteksi warna, bentuk, ukuran, dan kotoran/cacat visual",
+      "High-resolution touch screen dengan user-friendly graphics",
+      "Dilengkapi WIFI untuk dukungan pengaturan secara online",
+      "Akurasi Sortasi 99,99%"
+    ],
+    "specs": [
+      {
+        "label": "Kapasitas",
+        "value": "150-300 kg/jam"
+      },
+      {
+        "label": "Jumlah Channel",
+        "value": "32 channel"
+      },
+      {
+        "label": "Konsumsi Udara",
+        "value": "<0,5 m³/menit"
+      },
+      {
+        "label": "Dimensi",
+        "value": "420 x 1100 x 1820 mm"
+      }
+    ],
+    "justification": "Bentuk yang lebih kompak (mini) cocok untuk space terbatas dengan kemampuan sortasi optik yang mumpuni.",
+    "recommendation": "Cocok untuk UMKM atau skala menengah yang membutuhkan mesin sortasi warna handal dengan tapak lebih kecil.",
+    "researcher": "Tim Peneliti",
+    "comparisons": [
+      {
+        "name": "TS-32 (Mini-32)",
+        "brand": "TOPSORT",
+        "price": "Tidak tercantum",
+        "priceValue": 0,
+        "origin": "China",
+        "notes": "Garansi 2 tahun, bersertifikat CE."
+      }
+    ]
+  },
+  {
+    "slug": "coffee-gravity-separator-vmac",
+    "name": "Mesin Coffee Gravity Separator",
+    "category": "Pemilahan",
+    "image": "/images/Pemilah4.jpg",
+    "problem": "Kebutuhan sortasi biji kopi berdasarkan kepadatan/densitas yang tidak dapat dideteksi oleh mesin optical color sorter biasa.",
+    "description": "Gravity separation menggunakan kombinasi aliran udara ke atas dan getaran pada inclined deck untuk memisahkan green bean berdasarkan perbedaan berat jenis (densitas). Biji dipisahkan menjadi tiga bagian: heavy, middlings, dan lights.",
+    "priceRange": "Tidak tercantum",
+    "features": [
+      "Deteksi berat jenis (densitas) biji kopi",
+      "Air-fluidized vibrating deck dengan upward airflow",
+      "Pengaturan feed rate, air volume, side tilt, dan end raise",
+      "Memisahkan cacat terkait densitas"
+    ],
+    "specs": [
+      {
+        "label": "Kapasitas",
+        "value": "500 kg/jam - 10 ton/jam"
+      },
+      {
+        "label": "Fraksi Keluaran",
+        "value": "3 fraksi: Heavy, Middlings, Lights"
+      },
+      {
+        "label": "Motor Fan",
+        "value": "3-17 HP"
+      },
+      {
+        "label": "Catu Daya",
+        "value": "3-phase, 440 V"
+      }
+    ],
+    "justification": "Memisahkan biji kopi yang kopong, rusak karena serangga, atau berdensitas rendah secara efisien.",
+    "recommendation": "Sangat direkomendasikan untuk export processing plant atau large curing works.",
+    "researcher": "Tim Peneliti",
+    "comparisons": [
+      {
+        "name": "Coffee Gravity Separator",
+        "brand": "VMAC Industries",
+        "price": "Tidak tercantum",
+        "priceValue": 0,
+        "origin": "India",
+        "notes": "Kapasitas bervariasi sesuai ukuran deck (Small/Medium/Large)."
+      }
+    ]
+  },
+  {
+    "slug": "gravity-separator-sutton",
+    "name": "Mesin Gravity Separator",
+    "category": "Pemilahan",
+    "image": "/images/Pemilah5.jpg",
+    "problem": "Pemisahan berdasarkan berat jenis basah membutuhkan banyak air dan meningkatkan kadar air biji, sehingga pengeringan lebih lama.",
+    "description": "Gravity separation menggunakan kombinasi getaran meja dan aliran udara untuk memisahkan biji kopi berdasarkan perbedaan berat jenis (densitas). Biji yang lebih padat/berisi dan biji yang lebih ringan dapat bergerak ke arah keluaran yang berbeda.",
+    "priceRange": "Rp 160.950.000",
+    "features": [
+      "Gravity Separator / Mesin Sutton",
+      "Vibrating inclined deck dan air fluidization",
+      "Mengelompokkan biji kopi berdasarkan berat jenis",
+      "Tanpa ketergantungan pada proses basah"
+    ],
+    "specs": [
+      {
+        "label": "Kapasitas",
+        "value": "1-2 ton/jam"
+      },
+      {
+        "label": "Dimensi",
+        "value": "2000 x 1250 x 1400 mm"
+      },
+      {
+        "label": "Penggerak",
+        "value": "4,5 HP"
+      },
+      {
+        "label": "Status",
+        "value": "Verified Supplier"
+      }
+    ],
+    "justification": "Mampu memisahkan biji berdasarkan densitas tanpa menggunakan air, menghemat sumber daya air dan waktu pengeringan.",
+    "recommendation": "Direkomendasikan untuk pengolah kopi yang mencari solusi lokal mesin pemisah densitas kering.",
+    "researcher": "Tim Peneliti",
+    "comparisons": [
+      {
+        "name": "Mesin Sutton",
+        "brand": "CV. Kalfarolab Anugerah Nabawi",
+        "price": "Rp 160.950.000",
+        "priceValue": 160950000,
+        "origin": "Indonesia",
+        "notes": "Lokasi pengiriman Cileunyi, Kab. Bandung."
       }
     ]
   }
