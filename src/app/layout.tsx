@@ -1,12 +1,25 @@
-/**
- * ROOT LAYOUT — Template utama yang membungkus semua halaman.
- * - Menyisipkan Google Fonts (Montserrat & Roboto)
- * - Menyisipkan globals.css (design system)
- * - Mengatur metadata SEO default (title & description)
- * - lang="id" untuk accessibility Bahasa Indonesia
- */
+// NOTE:
+// Root Layout — Template utama pembungkus semua halaman.
+// Menyisipkan Google Fonts (Montserrat & Roboto), globals.css (design system),
+// metadata SEO default (title & description), dan lang="id" untuk aksesibilitas.
+
 import type { Metadata } from "next";
+import { Montserrat, Roboto } from "next/font/google";
 import "./globals.css";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-montserrat",
+});
+
+const roboto = Roboto({
+  weight: ["100", "300", "400", "500", "700", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-roboto",
+});
 
 export const metadata: Metadata = {
   title: "Teknologi Tepat Guna",
@@ -19,19 +32,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="id">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body>{children}</body>
+      <body className={`${montserrat.variable} ${roboto.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

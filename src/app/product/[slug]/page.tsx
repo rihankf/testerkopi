@@ -1,16 +1,15 @@
-/**
- * HALAMAN DETAIL PRODUK — /product/[slug]
- * Dynamic route untuk menampilkan detail setiap alat teknologi.
- * Menggunakan generateStaticParams() untuk pre-render semua slug produk.
- * Menampilkan: hero, problem statement, deskripsi + spesifikasi, alat lainnya.
- * Data comparisons (perbandingan harga) tersedia tapi belum ditampilkan di UI.
- */
+// NOTE:
+// Halaman Detail Produk (/product/[slug]) — Dynamic route.
+// Menggunakan generateStaticParams() untuk pre-render semua slug produk.
+// Section: Problem Statement, Deskripsi Solusi (gambar + specs + tombol beli), Alat Lainnya.
+
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingContact from "@/components/ui/FloatingContact";
+import CatalogCard from "@/components/ui/CatalogCard";
 import { tools } from "@/data/content";
 
 export function generateStaticParams() {
@@ -32,26 +31,7 @@ export default async function ToolPage({
   return (
     <>
       <Header />
-      <main className="product-page">
-        {/* ── HERO ── */}
-        <section className="product-hero">
-          <Image
-            src={tool.image}
-            alt=""
-            fill
-            sizes="100vw"
-            className="product-hero-bg"
-            priority
-          />
-          <div className="product-hero-overlay" />
-          <div className="container product-hero-inner">
-            <p className="detail-kicker">{tool.category}</p>
-            <h1>{tool.name}</h1>
-            <p>Range harga: {tool.priceRange}</p>
-          </div>
-        </section>
-
-        {/* ── PROBLEM STATEMENT ── */}
+      <main className="product-page" style={{ paddingTop: "90px" }}>
         <section className="tool-problem section" style={{ padding: "40px 0" }}>
           <div className="container tool-problem-grid">
             <div>
@@ -65,9 +45,11 @@ export default async function ToolPage({
           </div>
         </section>
 
-        {/* ── DESKRIPSI SOLUSI ── */}
         <section className="container product-story" style={{ marginTop: "0" }}>
-          <div className="product-showcase">
+          <div
+            className="product-showcase"
+            style={{ position: "sticky", top: "110px" }}
+          >
             <div className="product-main-image">
               <Image
                 src={tool.image}
@@ -76,36 +58,121 @@ export default async function ToolPage({
                 sizes="(max-width: 800px) 100vw, 47vw"
               />
             </div>
-            <div className="quality-stamp">
-              <strong>✓</strong>
-              <span>
-                Tepat
-                <br />
-                Guna
-              </span>
-            </div>
           </div>
           <article className="detail-copy">
-            <p className="detail-kicker dark">Solusi Teknologi</p>
-            <h2>Deskripsi Alat</h2>
-            <p className="lead">{tool.description}</p>
-            {/* Spesifikasi digabung di bawahnya */}
-            <h3 className="detail-subtitle" style={{ marginTop: "30px", marginBottom: "15px" }}>Spesifikasi</h3>
-            <div className="specs-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "15px" }}>
-              {tool.specs.map((s, i) => (
-                <div className="spec-item" key={i} style={{ padding: "15px", border: "1px solid var(--border)", borderRadius: "8px", background: "var(--cream)" }}>
-                  <span className="spec-label" style={{ display: "block", fontSize: "12px", color: "var(--muted)", marginBottom: "4px" }}>{s.label}</span>
-                  <strong className="spec-value" style={{ display: "block", fontSize: "14px", color: "var(--ink)" }}>{s.value}</strong>
-                </div>
-              ))}
+            <p className="detail-kicker dark" style={{ marginBottom: "8px" }}>
+              {tool.category}
+            </p>
+            <h1
+              style={{
+                font: '800 34px/1.2 "Montserrat", sans-serif',
+                letterSpacing: "-1px",
+                margin: "0 0 16px",
+                color: "var(--ink)",
+              }}
+            >
+              {tool.name}
+            </h1>
+            <div style={{ marginBottom: "24px" }}>
+              <strong
+                style={{
+                  fontSize: "28px",
+                  color: "var(--ink)",
+                  fontWeight: "800",
+                }}
+              >
+                {tool.priceRange}
+              </strong>
             </div>
+
+            <a
+              href={tool.buyLink || "#"}
+              target={tool.buyLink ? "_blank" : undefined}
+              rel={tool.buyLink ? "noopener noreferrer" : undefined}
+              className="buy-button"
+              style={{
+                display: "inline-block",
+                width: "100%",
+                textAlign: "center",
+                padding: "14px 24px",
+                background: "var(--sand)",
+                color: "#fff",
+                border: "none",
+                borderRadius: "30px",
+                fontWeight: "700",
+                fontSize: "16px",
+                marginBottom: "32px",
+                textDecoration: "none",
+                boxShadow: "0 4px 12px rgba(255, 154, 0, 0.3)",
+              }}
+            >
+              Beli Langsung
+            </a>
+
+            <details className="product-accordion" open>
+              <summary>Deskripsi Produk</summary>
+              <div className="accordion-content">
+                <p className="lead" style={{ margin: 0 }}>
+                  {tool.description}
+                </p>
+              </div>
+            </details>
+
+            <details className="product-accordion" open>
+              <summary>Spesifikasi Produk</summary>
+              <div className="accordion-content">
+                <div
+                  className="specs-grid"
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "1fr 1fr",
+                    gap: "15px",
+                  }}
+                >
+                  {tool.specs.map((s, i) => (
+                    <div
+                      className="spec-item"
+                      key={i}
+                      style={{
+                        padding: "15px",
+                        border: "1px solid var(--border)",
+                        borderRadius: "8px",
+                        background: "var(--cream)",
+                      }}
+                    >
+                      <span
+                        className="spec-label"
+                        style={{
+                          display: "block",
+                          fontSize: "12px",
+                          color: "var(--muted)",
+                          marginBottom: "4px",
+                        }}
+                      >
+                        {s.label}
+                      </span>
+                      <strong
+                        className="spec-value"
+                        style={{
+                          display: "block",
+                          fontSize: "14px",
+                          color: "var(--ink)",
+                        }}
+                      >
+                        {s.value}
+                      </strong>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </details>
           </article>
         </section>
 
-
-
-        {/* ── ALAT LAINNYA ── */}
-        <section className="related-section container" style={{ marginTop: "60px", marginBottom: "60px" }}>
+        <section
+          className="related-section container"
+          style={{ marginTop: "60px", marginBottom: "60px" }}
+        >
           <div className="related-heading">
             <div>
               <p className="detail-kicker dark">Katalog Lainnya</p>
@@ -117,22 +184,7 @@ export default async function ToolPage({
           </div>
           <div className="related-grid">
             {related.slice(0, 3).map((item) => (
-              <Link
-                href={`/product/${item.slug}`}
-                className="related-card"
-                key={item.slug}
-              >
-                <div>
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    fill
-                    sizes="50vw"
-                  />
-                </div>
-                <span>{item.category}</span>
-                <h3>{item.name}</h3>
-              </Link>
+              <CatalogCard key={item.slug} tool={item} />
             ))}
           </div>
         </section>

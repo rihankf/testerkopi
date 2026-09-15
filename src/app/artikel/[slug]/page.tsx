@@ -1,9 +1,8 @@
-/**
- * HALAMAN ARTIKEL — /[slug]
- * Dynamic route untuk menampilkan artikel kajian.
- * Menggunakan generateStaticParams() untuk pre-render semua slug artikel.
- * Menampilkan: breadcrumb, judul, cover image, konten paragraf, tags, navigasi prev/next, related articles.
- */
+// NOTE:
+// Halaman Artikel (/artikel/[slug]) — Dynamic route untuk artikel kajian.
+// Menggunakan generateStaticParams() untuk pre-render semua slug artikel.
+// Menampilkan: breadcrumb, judul, cover image, konten paragraf, tags, navigasi prev/next, related articles.
+
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -50,9 +49,7 @@ export default async function ArticlePage({
               <span className="author-mark">M</span>
               <div>
                 <strong>Tim Maganghub</strong>
-                <span>
-                  {article.date} &nbsp;•&nbsp; 5 menit baca
-                </span>
+                <span>{article.date} &nbsp;•&nbsp; 5 menit baca</span>
               </div>
             </div>
           </div>
@@ -111,7 +108,7 @@ export default async function ArticlePage({
           </div>
           <nav className="post-nav">
             {previous ? (
-              <Link href={`/${previous.slug}`}>
+              <Link href={`/artikel/${previous.slug}`}>
                 <small>Artikel sebelumnya</small>
                 <strong>← {previous.title}</strong>
               </Link>
@@ -119,7 +116,7 @@ export default async function ArticlePage({
               <span />
             )}
             {next && (
-              <Link href={`/${next.slug}`}>
+              <Link href={`/artikel/${next.slug}`}>
                 <small>Artikel berikutnya</small>
                 <strong>{next.title} →</strong>
               </Link>
@@ -140,7 +137,7 @@ export default async function ArticlePage({
             <div className="related-grid">
               {related.map((item) => (
                 <Link
-                  href={`/${item.slug}`}
+                  href={`/artikel/${item.slug}`}
                   className="related-card"
                   key={item.slug}
                 >

@@ -1,13 +1,9 @@
-/**
- * HEADER — Komponen navigasi utama website.
- * Client component karena menggunakan state (menu toggle, scroll detection).
- *
- * Behavior:
- * - Di homepage: transparan, logo putih (filter invert)
- * - Di inner page: solid background (var(--deep))
- * - Saat scroll > 20px: tambah shadow
- * - Mobile: hamburger menu toggle
- */
+// NOTE:
+// Header — Komponen navigasi utama website (client component).
+// Di homepage: transparan + logo putih (filter invert). Di inner page: solid background.
+// Saat scroll > 20px: tambah shadow. Mobile: hamburger menu toggle.
+// Menggunakan useState (menu open, scroll) dan usePathname (deteksi homepage).
+
 "use client";
 
 import Link from "next/link";
@@ -67,7 +63,10 @@ export default function Header() {
           <span />
           <span />
         </button>
-        <nav className={open ? "nav open" : "nav"} aria-label="Primary navigation">
+        <nav
+          className={open ? "nav open" : "nav"}
+          aria-label="Primary navigation"
+        >
           {links.map(([label, href]) => (
             <Link key={label} href={href} onClick={() => setOpen(false)}>
               {label}

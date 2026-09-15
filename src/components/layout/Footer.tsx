@@ -1,7 +1,7 @@
-/**
- * FOOTER — Footer utama website.
- * Menampilkan logo, deskripsi singkat, Google Maps embed, dan copyright.
- */
+// NOTE:
+// Footer — Footer utama website.
+// Menampilkan logo, deskripsi singkat, Google Maps embed, dan copyright.
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -27,8 +27,7 @@ export default function Footer() {
           <p>
             Platform teknologi tepat guna untuk komoditas unggulan Indonesia.
             Mengidentifikasi kebutuhan stakeholder dan merekomendasikan solusi
-            teknologi yang terjangkau, terukur, dan berdampak berdasarkan kajian
-            mendalam dan validasi lapangan.
+            teknologi yang terjangkau dan berdampak.
           </p>
         </div>
         <div className="footer-map" style={{ width: "100%" }}>
@@ -45,8 +44,7 @@ export default function Footer() {
       </div>
       <div className="copyright">
         <div className="container">
-          ©2026.Teknologi Tepat Guna Komoditas Unggulan
-          Indonesia.
+          ©2026.Teknologi Tepat Guna Komoditas Unggulan Indonesia.
         </div>
       </div>
     </footer>

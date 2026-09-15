@@ -1,56 +1,59 @@
-/* ═══════════════════════════════════════════════════════════
-   MAGANGHUB — Asesmen Teknologi Tepat Guna Komoditas Kopi
-   Design System & Global Styles
+/*
+ * NOTE — globals.css (Design System)
+ * Struktur file ini:
+ *   1. Tokens        — CSS custom properties (warna, radius, shadow, transition)
+ *   2. Reset         — Box-sizing, body defaults, reset dasar
+ *   3. Utilities     — Container, section padding, animasi (fadeInUp, scaleIn)
+ *   4. Header        — Navigasi fixed, transparan di homepage, solid di inner page
+ *   5. Hero          — Banner fullscreen homepage dengan overlay gradient
+ *   6. Eyebrow/Heading — Label section + heading reusable (h2)
+ *   7. Buttons       — Tombol global (solid & outline)
+ *   8. Problems      — Kartu masalah pasca panen (homepage & tentang)
+ *   9. About         — Layout 2 kolom gambar + narasi (tentang)
+ *  10. Objectives    — Grid 4 kartu tujuan proyek (tentang)
+ *  11. About CTA     — Tombol ajakan di bawah section tentang
+ *  12. Catalog       — Grid katalog alat teknologi (homepage & teknologi)
+ *  13. Timeline      — Rangkuman masalah dalam bentuk timeline (tentang)
+ *  14. Contact       — Halaman kontak
+ *  15. Footer        — Footer + Google Maps embed
+ *  16. WhatsApp Float — Tombol kontak mengambang
+ *  17. Product Detail — Halaman detail alat (hero, problem, specs, related)
+ *  18. Article Detail — Halaman artikel kajian (hero, cover, konten, navigasi)
+ *  19. Not Found     — Halaman 404
+ *  20. Inner Pages   — Header solid + offset konten untuk halaman non-homepage
+ *  21. Mitra         — Halaman mitra kerjasama (glassmorphism card)
+ *  22. Responsive    — Tablet (≤900px) dan Mobile (≤600px)
+ *  23. Accordion     — Accordion detail produk (deskripsi & spesifikasi)
+ */
 
-   STRUKTUR CSS:
-   1. Tokens & Reset          — Variabel warna, font, dan reset default
-   2. Utilities & Animations  — Container, section padding, keyframes
-   3. Header                  — Navigasi utama (fixed, scroll effect)
-   4. Hero                    — Banner utama homepage (fullscreen)
-   5. Buttons                 — Tombol global (.button, .button-outline)
-   6. Problems Section        — Kartu identifikasi masalah pasca panen
-   7. About Section           — Layout 2 kolom untuk narasi latar belakang
-   8. Objectives Section      — Grid kartu tujuan proyek
-   9. Catalog (Tools)         — Grid katalog alat teknologi
-   10. Contact                — Layout kontak & lokasi
-   11. Footer                 — Footer dengan peta & copyright
-   12. WhatsApp Float         — Tombol floating kontak WhatsApp
-   13. Product Detail Page    — Halaman detail alat (hero, problem, specs)
-   14. Price Comparison Table — Tabel perbandingan harga alat
-   15. Article Detail Page    — Halaman artikel kajian
-   16. Not Found              — Halaman 404
-   17. Inner Page Header      — Header styling untuk non-homepage
-   18. Mitra Section          — Halaman mitra kerjasama
-   19. Responsive             — Media queries (tablet & mobile)
-   ═══════════════════════════════════════════════════════════ */
-
-/* ── 1. Tokens ── */
 :root {
-  --ink: #4F200D;
-  --green: #FF9A00;
-  --deep: #4F200D;
-  --cream: #F6F1E9;
-  --sand: #FF9A00;
-  --gold: #FFD93D;
-  --white: #F6F1E9;
+  --ink: #4f200d;
+  --green: #ff9a00;
+  --deep: #4f200d;
+  --cream: #f6f1e9;
+  --sand: #ff9a00;
+  --gold: #ffd93d;
+  --white: #f6f1e9;
   --muted: rgba(79, 32, 13, 0.7);
-  --accent: #FF9A00;
+  --accent: #ff9a00;
   --accent-light: rgba(255, 154, 0, 0.15);
-  --danger: #DC2626;
-  --surface: #F6F1E9;
+  --danger: #dc2626;
+  --surface: #f6f1e9;
   --border: rgba(79, 32, 13, 0.12);
   --radius: 16px;
   --radius-sm: 10px;
   --shadow-sm: 0 2px 8px rgba(79, 32, 13, 0.06);
-  --shadow-md: 0 8px 30px rgba(79, 32, 13, 0.10);
+  --shadow-md: 0 8px 30px rgba(79, 32, 13, 0.1);
   --shadow-lg: 0 20px 60px rgba(79, 32, 13, 0.14);
-  --transition: .3s cubic-bezier(.4, 0, .2, 1);
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ── Reset ── */
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 html {
-  /* Hapus scroll-behavior smooth agar routing Next.js normal kembali (selalu muat dari atas) */
 }
 body {
   margin: 0;
@@ -61,55 +64,64 @@ body {
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
 }
-img { display: block; }
-a { color: inherit; text-decoration: none; }
+img {
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-/* ── 2. Utilities ── */
-.container { width: min(1200px, calc(100% - 48px)); margin-inline: auto; }
-.section { padding: 50px 0; }
+.container {
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+}
+.section {
+  padding: 50px 0;
+}
 
-/* ── Animations ── */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-30px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-@keyframes slideInRight {
-  from { opacity: 0; transform: translateX(30px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-@keyframes scaleIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* ═══════════════════════════════════════
-   3. HEADER
-   Navigasi utama — fixed di top, berubah saat scroll.
-   Di homepage: transparan (absolute). Di inner page: solid.
-   ═══════════════════════════════════════ */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .site-header {
   height: 90px;
   display: flex;
   align-items: center;
   position: fixed;
   z-index: 50;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   color: #fff;
   transition: var(--transition);
 }
 .site-header::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: url('/images/header-bg.jpg') center/cover no-repeat;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/images/header-bg.jpg") center/cover no-repeat;
   filter: blur(8px) brightness(0.6);
   z-index: -1;
   transition: var(--transition);
@@ -120,7 +132,6 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Di beranda: header transparan (absolute, bukan fixed) */
 body:has(.home-page) .site-header {
   position: absolute !important;
   background: transparent !important;
@@ -130,70 +141,102 @@ body:has(.home-page) .site-header {
 body:has(.home-page) .site-header::before {
   display: none;
 }
-.header-inner { display: flex; align-items: center; justify-content: space-between; }
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-/* Logo */
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 22px;
   font-weight: 700;
-  letter-spacing: -.5px;
+  letter-spacing: -0.5px;
   font-family: "Montserrat", sans-serif;
 }
-.logo .logo-icon { font-size: 28px; }
-.logo strong { color: var(--sand); }
+.logo .logo-icon {
+  font-size: 28px;
+}
+.logo strong {
+  color: var(--sand);
+}
 
-/* Nav links */
-.nav { display: flex; gap: 32px; align-items: center; }
+.nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
 .nav a {
   font-size: 13px;
   font-weight: 600;
-  letter-spacing: .3px;
+  letter-spacing: 0.3px;
   transition: var(--transition);
   position: relative;
 }
 .nav a::after {
   content: "";
   position: absolute;
-  bottom: -4px; left: 0;
-  width: 0; height: 2px;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
   background: var(--sand);
   transition: var(--transition);
 }
-.nav a:hover { color: var(--sand); }
-.nav a:hover::after { width: 100%; }
+.nav a:hover {
+  color: var(--sand);
+}
+.nav a:hover::after {
+  width: 100%;
+}
 
-/* Hamburger menu (mobile) */
-.menu-toggle { display: none; background: none; border: 0; padding: 8px; cursor: pointer; }
-.menu-toggle span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: var(--transition); }
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  margin: 5px 0;
+  transition: var(--transition);
+}
 
-/* ═══════════════════════════════════════
-   4. HERO — Banner utama homepage
-   Fullscreen dengan background image dan overlay gradient.
-   ═══════════════════════════════════════ */
 .hero {
   min-height: 100vh;
   position: relative;
-  background: url('/images/gallery-23.jpg') center 43% / cover no-repeat;
+  background: url("/images/gallery-23.jpg") center 43% / cover no-repeat;
   color: white;
   display: flex;
   align-items: center;
 }
 .hero-shade {
-  position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(10, 19, 12, .88) 0%, rgba(10, 19, 12, .55) 50%, rgba(10, 19, 12, .3) 100%);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 19, 12, 0.88) 0%,
+    rgba(10, 19, 12, 0.55) 50%,
+    rgba(10, 19, 12, 0.3) 100%
+  );
 }
 .hero-content {
   position: relative;
   padding-top: 40px;
-  animation: fadeInUp .8s ease-out;
+  animation: fadeInUp 0.8s ease-out;
 }
 
-/* Eyebrow & Section Heading — dipakai di hero dan setiap section */
-.eyebrow, .section-heading > span {
-  display: flex; align-items: center; gap: 13px;
+.eyebrow,
+.section-heading > span {
+  display: flex;
+  align-items: center;
+  gap: 13px;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 16px;
@@ -201,55 +244,80 @@ body:has(.home-page) .site-header::before {
   color: var(--sand);
   margin-bottom: 20px;
 }
-.eyebrow::before, .section-heading > span::before {
+.eyebrow::before,
+.section-heading > span::before {
   content: "";
-  width: 40px; height: 1px;
+  width: 40px;
+  height: 1px;
   background: currentColor;
 }
-.hero h1, .section-heading h2, .detail-hero h1, .article-detail h1, .not-found h1 {
-  font: 800 56px/1.1 "Montserrat", sans-serif;
+.hero h1,
+.section-heading h2,
+.detail-hero h1,
+.article-detail h1,
+.not-found h1 {
+  font:
+    800 56px/1.1 "Montserrat",
+    sans-serif;
   letter-spacing: -2px;
   margin: 0;
 }
 .hero-copy {
   max-width: 600px;
   font-size: 16px;
-  color: rgba(255, 255, 255, .82);
+  color: rgba(255, 255, 255, 0.82);
   margin: 24px 0 32px;
   line-height: 1.8;
 }
-.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
 
-/* ═══════════════════════════════════════
-   5. BUTTONS — Tombol global
-   ═══════════════════════════════════════ */
 .button {
   display: inline-flex;
-  align-items: center; justify-content: center;
+  align-items: center;
+  justify-content: center;
   background: var(--sand);
   color: var(--deep);
   padding: 14px 30px;
-  font-size: 13px; font-weight: 700;
+  font-size: 13px;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   border-radius: var(--radius-sm);
   transition: var(--transition);
   border: 2px solid var(--sand);
 }
-.button:hover { background: #b8962f; border-color: #b8962f; transform: translateY(-2px); box-shadow: var(--shadow-md); }
-.button-outline { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
-.button-outline:hover { background: rgba(255,255,255,.1); border-color: #fff; }
+.button:hover {
+  background: #b8962f;
+  border-color: #b8962f;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.button-outline {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.button-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
 
-/* ═══════════════════════════════════════
-   6. PROBLEMS / IDENTIFICATION SECTION
-   Kartu masalah pasca panen kopi — dipakai di homepage & tentang.
-   ═══════════════════════════════════════ */
 .problems-section {
   background: var(--white);
 }
-.problems-section .section-heading { text-align: center; }
-.problems-section .section-heading > span { justify-content: center; }
-.problems-section .section-heading h2 { margin: auto; }
+.problems-section .section-heading {
+  text-align: center;
+}
+.problems-section .section-heading > span {
+  justify-content: center;
+}
+.problems-section .section-heading h2 {
+  margin: auto;
+}
 .problems-subtitle {
   text-align: center;
   color: var(--muted);
@@ -275,28 +343,34 @@ body:has(.home-page) .site-header::before {
 .problem-card::after {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 4px; height: 100%;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
   background: linear-gradient(180deg, var(--accent), var(--sand));
   opacity: 0;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
 .problem-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);
   border-color: var(--sand);
 }
-.problem-card:hover::after { opacity: 1; }
+.problem-card:hover::after {
+  opacity: 1;
+}
 .problem-card-icon {
   font-size: 38px;
   margin-bottom: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: scaleIn .5s ease-out;
+  animation: scaleIn 0.5s ease-out;
 }
 .problem-card h3 {
-  font: 700 18px "Montserrat", sans-serif;
+  font:
+    700 18px "Montserrat",
+    sans-serif;
   margin: 0 0 12px;
   color: var(--ink);
 }
@@ -307,49 +381,70 @@ body:has(.home-page) .site-header::before {
   margin: 0 0 18px;
 }
 .problem-impact {
-  background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
   border-radius: var(--radius-sm);
   padding: 14px 18px;
   font-size: 13px;
   line-height: 1.6;
-  color: #92400E;
+  color: #92400e;
 }
 .problem-impact strong {
   font-weight: 800;
-  color: #78350F;
+  color: #78350f;
 }
 
-/* ═══════════════════════════════════════
-   7. ABOUT SECTION
-   Layout 2 kolom — gambar + narasi teks.
-   Dipakai di halaman Tentang.
-   ═══════════════════════════════════════ */
-.about { padding-top: 60px; }
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-.about-copy { padding-top: 20px; color: var(--muted); font-size: 15px; line-height: 1.85; }
-.about-copy p { margin: 0 0 18px; }
-.about-copy strong { color: var(--ink); }
+.about {
+  padding-top: 60px;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.about-copy {
+  padding-top: 20px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+.about-copy p {
+  margin: 0 0 18px;
+}
+.about-copy strong {
+  color: var(--ink);
+}
 .text-link {
-  display: inline-flex; gap: 10px;
-  margin-top: 12px; color: var(--ink);
-  font-weight: 700; font-size: 14px;
+  display: inline-flex;
+  gap: 10px;
+  margin-top: 12px;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 14px;
   border-bottom: 2px solid var(--sand);
   padding-bottom: 6px;
   transition: var(--transition);
 }
-.text-link:hover { color: var(--accent); }
-.section-heading h2 { font-size: 40px; max-width: 520px; }
+.text-link:hover {
+  color: var(--accent);
+}
+.section-heading h2 {
+  font-size: 40px;
+  max-width: 520px;
+}
 
-/* ═══════════════════════════════════════
-   8. OBJECTIVES SECTION
-   Grid 4 kartu tujuan proyek — di halaman Tentang.
-   ═══════════════════════════════════════ */
 .objectives-section {
   background: var(--cream);
 }
-.objectives-section .section-heading { text-align: center; }
-.objectives-section .section-heading > span { justify-content: center; }
-.objectives-section .section-heading h2 { margin: auto; }
+.objectives-section .section-heading {
+  text-align: center;
+}
+.objectives-section .section-heading > span {
+  justify-content: center;
+}
+.objectives-section .section-heading h2 {
+  margin: auto;
+}
 .objectives-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -357,8 +452,8 @@ body:has(.home-page) .site-header::before {
   margin-top: 50px;
 }
 .objective-card {
-  background: #FFF9E6;
-  border: 1px solid #FDE68A;
+  background: #fff9e6;
+  border: 1px solid #fde68a;
   border-radius: var(--radius);
   padding: 40px;
   transition: var(--transition);
@@ -369,7 +464,9 @@ body:has(.home-page) .site-header::before {
   box-shadow: var(--shadow-md);
 }
 .objective-number {
-  font: 800 48px "Montserrat", sans-serif;
+  font:
+    800 48px "Montserrat",
+    sans-serif;
   background: linear-gradient(135deg, var(--sand), #fbbf24);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -378,7 +475,9 @@ body:has(.home-page) .site-header::before {
   margin-bottom: 16px;
 }
 .objective-card h3 {
-  font: 700 19px "Montserrat", sans-serif;
+  font:
+    700 19px "Montserrat",
+    sans-serif;
   margin: 0 0 14px;
   color: var(--ink);
 }
@@ -389,22 +488,31 @@ body:has(.home-page) .site-header::before {
   margin: 0;
 }
 
-/* About CTA — tombol ajakan di bawah section tentang */
 .about-cta {
   background: var(--cream);
 }
-.about-cta .section-heading { text-align: center; }
-.about-cta .section-heading > span { justify-content: center; }
-.about-cta .section-heading h2 { margin: auto; }
+.about-cta .section-heading {
+  text-align: center;
+}
+.about-cta .section-heading > span {
+  justify-content: center;
+}
+.about-cta .section-heading h2 {
+  margin: auto;
+}
 
-/* ═══════════════════════════════════════
-   9. CATALOG (TOOLS)
-   Grid katalog alat teknologi — di homepage & halaman teknologi.
-   ═══════════════════════════════════════ */
-.catalog { background: var(--white); }
-.catalog .section-heading { text-align: center; }
-.catalog .section-heading > span { justify-content: center; }
-.catalog .section-heading h2 { margin: auto; }
+.catalog {
+  background: var(--white);
+}
+.catalog .section-heading {
+  text-align: center;
+}
+.catalog .section-heading > span {
+  justify-content: center;
+}
+.catalog .section-heading h2 {
+  margin: auto;
+}
 .catalog-subtitle {
   text-align: center;
   color: var(--muted);
@@ -439,59 +547,27 @@ body:has(.home-page) .site-header::before {
 }
 .catalog-image img {
   object-fit: cover;
-  transition: transform .6s cubic-bezier(.4, 0, .2, 1);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.catalog-card:hover .catalog-image img { transform: scale(1.06); }
-.catalog-category {
-  position: absolute;
-  top: 16px; left: 16px;
-  background: rgba(15, 36, 22, .82);
-  backdrop-filter: blur(8px);
-  color: var(--sand);
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  padding: 6px 14px;
-  border-radius: 20px;
+.catalog-card:hover .catalog-image img {
+  transform: scale(1.06);
 }
-.catalog-body { padding: 26px; }
+
+.catalog-body {
+  padding: 26px;
+}
 .catalog-body h3 {
-  font: 700 20px/1.35 "Montserrat", sans-serif;
+  font:
+    700 20px/1.35 "Montserrat",
+    sans-serif;
   margin: 0 0 10px;
 }
-.catalog-problem {
-  font-size: 13px;
-  color: var(--muted);
-  margin: 0 0 18px;
-  line-height: 1.6;
-}
-.catalog-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
-  font-size: 12px;
-}
-.catalog-price {
-  font-weight: 700;
-  color: var(--accent);
-  background: var(--accent-light);
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 11px;
-}
-.catalog-researcher { color: var(--muted); font-weight: 600; }
+
 .catalog-cta {
   text-align: center;
   margin-top: 48px;
 }
 
-/* ═══════════════════════════════════════
-   TIMELINE — Dipakai di halaman Tentang
-   (rangkuman masalah, bukan timeline proyek)
-   ═══════════════════════════════════════ */
 .timeline {
   position: relative;
   display: grid;
@@ -513,7 +589,8 @@ body:has(.home-page) .site-header::before {
   position: relative;
 }
 .timeline-node {
-  width: 56px; height: 56px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: var(--cream);
   border: 3px solid var(--border);
@@ -526,24 +603,35 @@ body:has(.home-page) .site-header::before {
   transition: var(--transition);
 }
 .timeline-month {
-  font: 700 14px "Montserrat", sans-serif;
+  font:
+    700 14px "Montserrat",
+    sans-serif;
   color: var(--muted);
 }
 .timeline-active .timeline-node {
   background: var(--sand);
   border-color: var(--sand);
-  box-shadow: 0 0 0 8px rgba(201, 168, 76, .2);
+  box-shadow: 0 0 0 8px rgba(201, 168, 76, 0.2);
   animation: pulse 2s infinite;
 }
-.timeline-active .timeline-month { color: var(--deep); }
+.timeline-active .timeline-month {
+  color: var(--deep);
+}
 
 @keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 6px rgba(201, 168, 76, .2); }
-  50% { box-shadow: 0 0 0 14px rgba(201, 168, 76, .08); }
+  0%,
+  100% {
+    box-shadow: 0 0 0 6px rgba(201, 168, 76, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(201, 168, 76, 0.08);
+  }
 }
 
 .timeline-content h3 {
-  font: 700 15px "Montserrat", sans-serif;
+  font:
+    700 15px "Montserrat",
+    sans-serif;
   margin: 0 0 8px;
 }
 .timeline-period {
@@ -562,22 +650,50 @@ body:has(.home-page) .site-header::before {
   line-height: 1.55;
 }
 
-/* ═══════════════════════════════════════
-   10. CONTACT — Halaman kontak
-   ═══════════════════════════════════════ */
-.contact { background: var(--cream); }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
-.contact-grid > div:first-child > p { color: var(--muted); max-width: 470px; line-height: 1.8; margin-top: 20px; }
-.locations { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; }
-.locations h3 { font: 700 17px "Montserrat", sans-serif; margin: 0 0 12px; }
-.locations p { color: var(--muted); font-size: 14px; margin: 0 0 10px; }
-.locations a { font-weight: 700; border-bottom: 1px solid; transition: var(--transition); font-size: 14px; }
-.locations a:hover { color: var(--accent); }
+.contact {
+  background: var(--cream);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+.contact-grid > div:first-child > p {
+  color: var(--muted);
+  max-width: 470px;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+.locations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+.locations h3 {
+  font:
+    700 17px "Montserrat",
+    sans-serif;
+  margin: 0 0 12px;
+}
+.locations p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+.locations a {
+  font-weight: 700;
+  border-bottom: 1px solid;
+  transition: var(--transition);
+  font-size: 14px;
+}
+.locations a:hover {
+  color: var(--accent);
+}
 
-/* ═══════════════════════════════════════
-   11. FOOTER — Footer utama + peta Google Maps
-   ═══════════════════════════════════════ */
-.footer { background: var(--deep); color: #fff; }
+.footer {
+  background: var(--deep);
+  color: #fff;
+}
 .footer-top {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -592,22 +708,29 @@ body:has(.home-page) .site-header::before {
   font-size: 22px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
-  letter-spacing: -.5px;
+  letter-spacing: -0.5px;
   margin-bottom: 12px;
 }
-.footer-logo .logo-icon { font-size: 28px; }
-.footer-logo strong { color: var(--sand); }
-.footer-brand p { color: rgba(255, 255, 255, .58); font-size: 14px; max-width: 500px; line-height: 1.7; margin: 0; }
+.footer-logo .logo-icon {
+  font-size: 28px;
+}
+.footer-logo strong {
+  color: var(--sand);
+}
+.footer-brand p {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 14px;
+  max-width: 500px;
+  line-height: 1.7;
+  margin: 0;
+}
 .copyright {
-  border-top: 1px solid rgba(255, 255, 255, .1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 14px 0;
   font-size: 12px;
-  color: rgba(255, 255, 255, .45);
+  color: rgba(255, 255, 255, 0.45);
 }
 
-/* ═══════════════════════════════════════
-   12. WHATSAPP FLOAT — Tombol kontak mengambang
-   ═══════════════════════════════════════ */
 .whatsapp-container {
   position: fixed;
   right: 24px;
@@ -625,7 +748,7 @@ body:has(.home-page) .site-header::before {
   border-radius: 20px;
   font-weight: 500;
   font-size: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   position: relative;
   display: flex;
   align-items: center;
@@ -663,33 +786,21 @@ body:has(.home-page) .site-header::before {
   transform: scale(1.05);
 }
 
-/* ═══════════════════════════════════════
-   13. PRODUCT/TOOL DETAIL PAGE
-   Halaman detail setiap alat teknologi.
-   Terdiri dari: hero, problem statement, deskripsi + specs, related.
-   ═══════════════════════════════════════ */
-.product-page { background: var(--white); }
-.product-hero {
-  height: 560px;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  color: #fff;
-  overflow: hidden;
+.product-page {
+  background: var(--white);
 }
-.product-hero-bg { object-fit: cover; filter: saturate(.75); }
-.product-hero-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(12, 25, 16, .92) 0%, rgba(12, 25, 16, .6) 50%, rgba(12, 25, 16, .2) 100%);
-}
-.product-hero-inner { position: relative; padding-bottom: 75px; }
+
 .breadcrumbs {
-  display: flex; gap: 12px; align-items: center;
+  display: flex;
+  gap: 12px;
+  align-items: center;
   margin-bottom: 50px;
   font-size: 12px;
-  color: rgba(255, 255, 255, .65);
+  color: rgba(255, 255, 255, 0.65);
 }
-.breadcrumbs a:hover { color: var(--sand); }
+.breadcrumbs a:hover {
+  color: var(--sand);
+}
 .detail-kicker {
   margin: 0 0 12px;
   text-transform: uppercase;
@@ -698,29 +809,24 @@ body:has(.home-page) .site-header::before {
   font-weight: 700;
   color: var(--sand);
 }
-.detail-kicker.dark { color: var(--sand); }
-.product-hero h1 {
-  font: 800 58px/1.1 "Montserrat", sans-serif;
-  letter-spacing: -2.5px;
-  margin: 0;
-  max-width: 700px;
-}
-.product-hero-inner > p:last-child {
-  font-size: 15px;
-  color: rgba(255, 255, 255, .72);
-  margin: 18px 0 0;
+.detail-kicker.dark {
+  color: var(--sand);
 }
 
-/* Problem Statement — penjelasan masalah yang diselesaikan alat */
-.tool-problem { background: var(--cream); padding: 40px 0; }
+.tool-problem {
+  background: var(--cream);
+  padding: 40px 0;
+}
 .tool-problem-grid {
   display: grid;
-  grid-template-columns: .8fr 1.2fr;
+  grid-template-columns: 0.8fr 1.2fr;
   gap: 70px;
   align-items: start;
 }
 .tool-problem-grid h2 {
-  font: 800 36px/1.2 "Montserrat", sans-serif;
+  font:
+    800 36px/1.2 "Montserrat",
+    sans-serif;
   letter-spacing: -1.5px;
   margin: 10px 0 0;
 }
@@ -734,10 +840,17 @@ body:has(.home-page) .site-header::before {
   border-radius: var(--radius-sm);
   padding: 32px;
 }
-.problem-icon { font-size: 32px; flex-shrink: 0; }
-.problem-content p { margin: 0; color: var(--muted); line-height: 1.85; font-size: 15px; }
+.problem-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+.problem-content p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.85;
+  font-size: 15px;
+}
 
-/* Product Story — deskripsi alat + specs grid */
 .product-story {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -746,47 +859,46 @@ body:has(.home-page) .site-header::before {
   align-items: start;
   gap: 80px;
 }
-.product-showcase { position: relative; }
+.product-showcase {
+  position: relative;
+}
 .product-main-image {
   position: relative;
   aspect-ratio: 1;
   overflow: hidden;
   border-radius: var(--radius);
 }
-.product-main-image img { object-fit: cover; transition: transform .8s; }
-.product-main-image:hover img { transform: scale(1.03); }
-.quality-stamp {
-  position: absolute;
-  right: -20px; bottom: 40px;
-  width: 120px; height: 120px;
-  background: var(--sand);
-  border-radius: 50%;
-  display: flex;
-  align-items: center; justify-content: center;
-  gap: 6px;
-  color: var(--deep);
-  box-shadow: var(--shadow-md);
+.product-main-image img {
+  object-fit: cover;
+  transition: transform 0.8s;
 }
-.quality-stamp strong { font: 800 24px "Montserrat"; }
-.quality-stamp span { font-size: 10px; line-height: 1.2; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+.product-main-image:hover img {
+  transform: scale(1.03);
+}
 
 .detail-copy h2 {
-  font: 800 34px/1.25 "Montserrat", sans-serif;
+  font:
+    800 34px/1.25 "Montserrat",
+    sans-serif;
   letter-spacing: -1px;
   margin: 10px 0 20px;
 }
-.detail-copy .lead { font-size: 15px; line-height: 1.85; color: var(--muted); margin-bottom: 28px; }
-.detail-subtitle {
-  font: 700 18px "Montserrat", sans-serif;
-  margin: 30px 0 14px;
-  color: var(--ink);
+.detail-copy .lead {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--muted);
+  margin-bottom: 28px;
 }
 
-/* Specs inline grid (digunakan di product detail page) */
-.spec-item:hover { border-color: var(--sand); box-shadow: var(--shadow-sm); }
+.spec-item:hover {
+  border-color: var(--sand);
+  box-shadow: var(--shadow-sm);
+}
 
-/* Related tools — grid alat lainnya di bawah detail */
-.related-section { padding-top: 50px; padding-bottom: 50px; }
+.related-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 .related-heading {
   display: flex;
   justify-content: space-between;
@@ -794,115 +906,140 @@ body:has(.home-page) .site-header::before {
   margin-bottom: 40px;
 }
 .related-heading h2 {
-  font: 800 34px "Montserrat", sans-serif;
+  font:
+    800 34px "Montserrat",
+    sans-serif;
   letter-spacing: -1px;
   margin: 10px 0 0;
 }
-.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.related-card > div {
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.related-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.related-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-sm);
+}
+.related-image-wrapper {
   position: relative;
   aspect-ratio: 1.4;
   overflow: hidden;
-  margin-bottom: 16px;
-  border-radius: var(--radius);
 }
-.related-card img { object-fit: cover; transition: .5s; }
-.related-card:hover img { transform: scale(1.05); }
-.related-card > span {
-  text-transform: uppercase;
-  color: var(--sand);
-  letter-spacing: 1.5px;
-  font-size: 10px;
-  font-weight: 700;
+.related-image-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, var(--cream));
 }
-.related-card h3 { font: 700 18px/1.4 "Montserrat", sans-serif; margin: 6px 0 0; }
-
-/* ═══════════════════════════════════════
-   14. PRICE COMPARISON TABLE
-   Tabel perbandingan harga dari berbagai brand.
-   ═══════════════════════════════════════ */
-.price-table-wrapper { overflow-x: auto; }
-.price-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 14px;
+.related-card img {
+  object-fit: cover;
+  transition: 0.5s;
 }
-.price-table th {
-  text-align: left;
-  padding: 14px 16px;
-  background: var(--deep);
-  color: #fff;
-  font: 600 12px "Montserrat", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.related-card:hover img {
+  transform: scale(1.05);
 }
-.price-table th:first-child { border-radius: var(--radius-sm) 0 0 0; }
-.price-table th:last-child { border-radius: 0 var(--radius-sm) 0 0; }
-.price-table td {
-  padding: 16px;
-  border-bottom: 1px solid var(--border);
-  vertical-align: top;
+.related-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 16px 16px;
 }
-.price-table tr:hover td { background: var(--accent-light); }
-.td-name { font-weight: 600; white-space: nowrap; }
-.td-price { min-width: 220px; }
-.td-price span { display: block; font-weight: 600; margin-bottom: 6px; }
-.td-notes { font-size: 13px; color: var(--muted); max-width: 280px; }
-.price-bar {
-  height: 6px;
-  background: var(--border);
-  border-radius: 3px;
+.related-card h3 {
+  font:
+    700 16px/1.4 "Montserrat",
+    sans-serif;
+  margin: 0;
+  color: var(--ink);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
-.price-bar-fill {
-  height: 100%;
-  border-radius: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--sand));
-  transition: width .8s cubic-bezier(.4, 0, .2, 1);
+.related-price-wrapper {
+  margin-top: auto;
+  text-align: right;
 }
-.row-expensive .price-bar-fill { background: linear-gradient(90deg, #e67e22, #e74c3c); }
-.row-cheap .price-bar-fill { background: linear-gradient(90deg, #27ae60, #2ecc71); }
-
-.badge {
+.related-price-wrapper hr {
+  border: none;
+  border-top: 1px solid rgba(79, 32, 13, 0.08);
+  margin: 12px 0;
+  width: 100%;
+}
+.related-price-wrapper strong {
   display: inline-block;
-  font-size: 9px;
+  font-size: 13px;
+  color: #f97316;
+  background-color: #ffedd5;
+  padding: 6px 12px;
+  border-radius: 12px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .8px;
-  padding: 3px 8px;
-  border-radius: 10px;
-  margin-left: 8px;
-  vertical-align: middle;
 }
-.badge-green { background: var(--accent-light); color: var(--accent); }
-.badge-red { background: #fde8e8; color: #c0392b; }
 
-/* ═══════════════════════════════════════
-   15. ARTICLE DETAIL PAGE
-   Halaman artikel kajian — hero, cover, konten, navigasi.
-   ═══════════════════════════════════════ */
-.article-page { background: var(--white); }
-.article-hero { background: var(--cream); padding: 60px 0 50px; }
-.dark-crumb { color: #777e78; margin-bottom: 45px; }
-.article-hero-copy { max-width: 960px; }
+.article-page {
+  background: var(--white);
+}
+.article-hero {
+  background: var(--cream);
+  padding: 60px 0 50px;
+}
+.dark-crumb {
+  color: #777e78;
+  margin-bottom: 45px;
+}
+.article-hero-copy {
+  max-width: 960px;
+}
 .article-hero h1 {
-  font: 800 50px/1.18 "Montserrat", sans-serif;
+  font:
+    800 50px/1.18 "Montserrat",
+    sans-serif;
   letter-spacing: -2px;
   margin: 0;
   max-width: 850px;
 }
-.article-byline { display: flex; align-items: center; gap: 13px; margin-top: 28px; }
+.article-byline {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 28px;
+}
 .author-mark {
-  width: 42px; height: 42px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  display: grid; place-items: center;
+  display: grid;
+  place-items: center;
   background: var(--deep);
   color: var(--sand);
-  font: 700 16px "Montserrat", sans-serif;
+  font:
+    700 16px "Montserrat",
+    sans-serif;
 }
-.article-byline div { display: flex; flex-direction: column; }
-.article-byline strong { font-size: 13px; }
-.article-byline div span { font-size: 11px; color: #858b86; }
+.article-byline div {
+  display: flex;
+  flex-direction: column;
+}
+.article-byline strong {
+  font-size: 13px;
+}
+.article-byline div span {
+  font-size: 11px;
+  color: #858b86;
+}
 
 .article-shell {
   margin-top: -60px;
@@ -916,7 +1053,9 @@ body:has(.home-page) .site-header::before {
   border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
 }
-.article-cover img { object-fit: cover; }
+.article-cover img {
+  object-fit: cover;
+}
 .article-layout {
   display: grid;
   grid-template-columns: 90px minmax(0, 700px);
@@ -925,8 +1064,10 @@ body:has(.home-page) .site-header::before {
   padding-top: 65px;
 }
 .share-column {
-  display: flex; flex-direction: column;
-  align-items: center; gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 .share-column > span {
   text-transform: uppercase;
@@ -936,16 +1077,27 @@ body:has(.home-page) .site-header::before {
   font-weight: 700;
 }
 .share-column a {
-  width: 38px; height: 38px;
+  width: 38px;
+  height: 38px;
   border: 1px solid var(--border);
   border-radius: 50%;
-  display: grid; place-items: center;
-  font-size: 12px; font-weight: 700;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 700;
   transition: var(--transition);
 }
-.share-column a:hover { background: var(--deep); color: white; border-color: var(--deep); }
+.share-column a:hover {
+  background: var(--deep);
+  color: white;
+  border-color: var(--deep);
+}
 
-.enriched p { font-size: 16px; line-height: 1.9; color: #515a53; }
+.enriched p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #515a53;
+}
 .enriched .article-lead {
   font-size: 19px;
   line-height: 1.75;
@@ -954,23 +1106,34 @@ body:has(.home-page) .site-header::before {
 }
 .enriched .article-lead::first-letter {
   float: left;
-  font: 800 66px/.78 "Montserrat", sans-serif;
+  font:
+    800 66px/0.78 "Montserrat",
+    sans-serif;
   color: var(--sand);
   margin: 10px 10px 0 0;
 }
 .enriched h2 {
-  font: 800 26px/1.35 "Montserrat", sans-serif;
-  letter-spacing: -.7px;
+  font:
+    800 26px/1.35 "Montserrat",
+    sans-serif;
+  letter-spacing: -0.7px;
   margin: 42px 0 14px;
 }
 .enriched blockquote {
-  font: 600 22px/1.55 "Montserrat", sans-serif;
+  font:
+    600 22px/1.55 "Montserrat",
+    sans-serif;
   border-left: 3px solid var(--sand);
   margin: 40px 0;
   padding: 8px 0 8px 28px;
   color: #314033;
 }
-.article-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 40px; }
+.article-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
 .article-tags span {
   background: var(--cream);
   padding: 7px 14px;
@@ -988,8 +1151,14 @@ body:has(.home-page) .site-header::before {
   display: flex;
   justify-content: space-between;
 }
-.article-shell .post-nav a { width: 42%; display: flex; flex-direction: column; }
-.article-shell .post-nav a:last-child { text-align: right; }
+.article-shell .post-nav a {
+  width: 42%;
+  display: flex;
+  flex-direction: column;
+}
+.article-shell .post-nav a:last-child {
+  text-align: right;
+}
 .post-nav small {
   text-transform: uppercase;
   color: #9a9f9a;
@@ -998,22 +1167,31 @@ body:has(.home-page) .site-header::before {
   margin-bottom: 7px;
   font-weight: 700;
 }
-.post-nav strong { font: 600 13px/1.45 "Montserrat", sans-serif; }
+.post-nav strong {
+  font:
+    600 13px/1.45 "Montserrat",
+    sans-serif;
+}
 
-.article-related { background: var(--cream); padding: 90px 0 100px; }
+.article-related {
+  background: var(--cream);
+  padding: 90px 0 100px;
+}
 
-/* ═══════════════════════════════════════
-   16. NOT FOUND — Halaman 404
-   ═══════════════════════════════════════ */
-.not-found { text-align: center; padding: 180px 24px 120px; }
-.not-found > p { font-size: 70px; color: var(--sand); margin: 0; }
-.not-found h1 { font-size: 42px; margin-bottom: 28px; }
+.not-found {
+  text-align: center;
+  padding: 180px 24px 120px;
+}
+.not-found > p {
+  font-size: 70px;
+  color: var(--sand);
+  margin: 0;
+}
+.not-found h1 {
+  font-size: 42px;
+  margin-bottom: 28px;
+}
 
-/* ═══════════════════════════════════════
-   17. HEADER ON INNER PAGES
-   Di halaman selain homepage, header solid (bukan transparan).
-   Konten inner page di-offset agar tidak tertutup header fixed.
-   ═══════════════════════════════════════ */
 body:has(.product-page) .site-header,
 body:has(.article-page) .site-header,
 body:has(.inner-page) .site-header,
@@ -1030,25 +1208,32 @@ body:has(.not-found) .site-header {
   padding-top: 0 !important;
 }
 
-/* ═══════════════════════════════════════
-   18. MITRA — Halaman mitra kerjasama
-   Background image dengan glassmorphism card.
-   ═══════════════════════════════════════ */
-.commodities { background: var(--cream); }
-.commodities .section-heading { text-align: center; }
-.commodities .section-heading > span { justify-content: center; }
-.commodities .section-heading h2 { margin: auto; }
+.commodities {
+  background: var(--cream);
+}
+.commodities .section-heading {
+  text-align: center;
+}
+.commodities .section-heading > span {
+  justify-content: center;
+}
+.commodities .section-heading h2 {
+  margin: auto;
+}
 
-/* ═══════════════════════════════════════
-   19. RESPONSIVE — Tablet (≤ 900px)
-   ═══════════════════════════════════════ */
 @media (max-width: 900px) {
-  .site-header { height: 70px; }
-  .menu-toggle { display: block; }
+  .site-header {
+    height: 70px;
+  }
+  .menu-toggle {
+    display: block;
+  }
   .nav {
     display: none;
     position: absolute;
-    left: 20px; right: 20px; top: 64px;
+    left: 20px;
+    right: 20px;
+    top: 64px;
     background: #fff;
     color: var(--ink);
     padding: 20px;
@@ -1058,56 +1243,106 @@ body:has(.not-found) .site-header {
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-lg);
   }
-  .nav.open { display: flex; }
-  .nav a::after { display: none; }
+  .nav.open {
+    display: flex;
+  }
+  .nav a::after {
+    display: none;
+  }
 
-  .hero { min-height: 100vh; }
-  .hero h1 { font-size: 46px; }
-  .about-grid, .contact-grid, .product-story, .tool-problem-grid {
+  .hero {
+    min-height: 100vh;
+  }
+  .hero h1 {
+    font-size: 46px;
+  }
+  .about-grid,
+  .contact-grid,
+  .product-story,
+  .tool-problem-grid {
     grid-template-columns: 1fr;
     gap: 45px;
   }
-  .problems-grid { grid-template-columns: 1fr; }
-  .objectives-grid { grid-template-columns: 1fr; }
-  .catalog-grid { grid-template-columns: repeat(2, 1fr); }
-  .timeline { grid-template-columns: repeat(3, 1fr); }
-  .footer-top { grid-template-columns: 2fr 1fr; gap: 50px; }
-  .article-hero h1 { font-size: 42px; }
-  .article-layout { grid-template-columns: 60px minmax(0, 1fr); gap: 22px; }
-  .product-hero { height: 480px; }
-  .product-hero h1 { font-size: 48px; }
-  .related-grid { grid-template-columns: repeat(2, 1fr); }
+  .problems-grid {
+    grid-template-columns: 1fr;
+  }
+  .objectives-grid {
+    grid-template-columns: 1fr;
+  }
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .timeline {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-top {
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+  }
+  .article-hero h1 {
+    font-size: 42px;
+  }
+  .article-layout {
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-/* ═══════════════════════════════════════
-   19b. RESPONSIVE — Mobile (≤ 600px)
-   ═══════════════════════════════════════ */
 @media (max-width: 600px) {
-  .container { width: min(100% - 28px, 1200px); }
-  .section { padding: 70px 0; }
+  .container {
+    width: min(100% - 28px, 1200px);
+  }
+  .section {
+    padding: 70px 0;
+  }
 
-  .hero { min-height: 100vh; }
-  .hero h1 { font-size: 36px; letter-spacing: -1.2px; }
-  .hero-copy { font-size: 14px; }
-  .section-heading h2 { font-size: 30px; }
+  .hero {
+    min-height: 100vh;
+  }
+  .hero h1 {
+    font-size: 36px;
+    letter-spacing: -1.2px;
+  }
+  .hero-copy {
+    font-size: 14px;
+  }
+  .section-heading h2 {
+    font-size: 30px;
+  }
 
-  .about { padding-top: 80px; }
-  .about-grid { gap: 25px; }
+  .about {
+    padding-top: 80px;
+  }
+  .about-grid {
+    gap: 25px;
+  }
 
-  /* Problems */
-  .problems-grid { grid-template-columns: 1fr; }
-  .problem-card { padding: 28px; }
+  .problems-grid {
+    grid-template-columns: 1fr;
+  }
+  .problem-card {
+    padding: 28px;
+  }
 
-  /* Objectives */
-  .objectives-grid { grid-template-columns: 1fr; }
+  .objectives-grid {
+    grid-template-columns: 1fr;
+  }
 
-  .catalog-grid { grid-template-columns: 1fr; }
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
 
   .timeline {
     grid-template-columns: 1fr;
     gap: 0;
   }
-  .timeline-line { display: none; }
+  .timeline-line {
+    display: none;
+  }
   .timeline-item {
     display: grid;
     grid-template-columns: 56px 1fr;
@@ -1118,47 +1353,161 @@ body:has(.not-found) .site-header {
     margin-left: 28px;
     padding-left: 24px;
   }
-  .timeline-item::before { display: none; }
-  .timeline-node { margin: 0; position: absolute; left: -31px; }
-  .timeline-active { border-color: var(--sand); }
+  .timeline-item::before {
+    display: none;
+  }
+  .timeline-node {
+    margin: 0;
+    position: absolute;
+    left: -31px;
+  }
+  .timeline-active {
+    border-color: var(--sand);
+  }
 
-  .contact-grid { gap: 35px; }
-  .locations { grid-template-columns: 1fr; }
+  .contact-grid {
+    gap: 35px;
+  }
+  .locations {
+    grid-template-columns: 1fr;
+  }
 
-  .footer-top { grid-template-columns: 1fr; gap: 35px; }
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
 
-  /* Detail pages */
-  .product-hero { height: 440px; }
-  .product-hero-inner { padding-bottom: 50px; }
-  .breadcrumbs { margin-bottom: 35px; gap: 8px; white-space: nowrap; overflow: hidden; }
-  .product-hero h1 { font-size: 38px; }
-  .tool-problem { padding: 55px 0; }
-  .tool-problem-grid { gap: 30px; }
-  .tool-problem-grid h2 { font-size: 28px; }
-  .product-story { padding-top: 60px; padding-bottom: 65px; gap: 45px; }
-  .quality-stamp { width: 95px; height: 95px; right: -5px; bottom: 18px; }
-  .quality-stamp strong { font-size: 20px; }
-  .detail-copy h2, .related-heading h2, .article-related h2 { font-size: 28px; }
-  .related-section { padding-top: 65px; padding-bottom: 70px; }
-  .related-heading { align-items: start; gap: 18px; }
-  .related-heading .text-link { font-size: 11px; white-space: nowrap; }
-  .related-grid { grid-template-columns: 1fr; }
+  .breadcrumbs {
+    margin-bottom: 35px;
+    gap: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .tool-problem {
+    padding: 55px 0;
+  }
+  .tool-problem-grid {
+    gap: 30px;
+  }
+  .tool-problem-grid h2 {
+    font-size: 28px;
+  }
+  .product-story {
+    padding-top: 60px;
+    padding-bottom: 65px;
+    gap: 45px;
+  }
 
-  /* Article */
-  .article-hero { padding: 75px 0 95px; }
-  .article-hero h1 { font-size: 34px; }
-  .dark-crumb { margin-bottom: 35px; }
-  .article-shell { margin-top: -40px; padding-bottom: 55px; }
-  .article-cover { aspect-ratio: 1.4; }
-  .article-layout { grid-template-columns: 1fr; padding-top: 45px; }
-  .share-column { flex-direction: row; justify-content: flex-start; }
-  .enriched .article-lead { font-size: 17px; }
-  .enriched blockquote { font-size: 18px; margin: 30px 0; padding-left: 18px; }
-  .enriched h2 { font-size: 22px; }
-  .article-shell .post-nav { margin-top: 45px; }
-  .article-shell .post-nav a { width: 47%; }
-  .article-related { padding: 60px 0 70px; }
+  .detail-copy h2,
+  .related-heading h2,
+  .article-related h2 {
+    font-size: 28px;
+  }
+  .related-section {
+    padding-top: 65px;
+    padding-bottom: 70px;
+  }
+  .related-heading {
+    align-items: start;
+    gap: 18px;
+  }
+  .related-heading .text-link {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
 
-  .whatsapp { width: 48px; height: 48px; right: 14px; bottom: 14px; font-size: 24px; }
+  .article-hero {
+    padding: 75px 0 95px;
+  }
+  .article-hero h1 {
+    font-size: 34px;
+  }
+  .dark-crumb {
+    margin-bottom: 35px;
+  }
+  .article-shell {
+    margin-top: -40px;
+    padding-bottom: 55px;
+  }
+  .article-cover {
+    aspect-ratio: 1.4;
+  }
+  .article-layout {
+    grid-template-columns: 1fr;
+    padding-top: 45px;
+  }
+  .share-column {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .enriched .article-lead {
+    font-size: 17px;
+  }
+  .enriched blockquote {
+    font-size: 18px;
+    margin: 30px 0;
+    padding-left: 18px;
+  }
+  .enriched h2 {
+    font-size: 22px;
+  }
+  .article-shell .post-nav {
+    margin-top: 45px;
+  }
+  .article-shell .post-nav a {
+    width: 47%;
+  }
+  .article-related {
+    padding: 60px 0 70px;
+  }
+
+  .whatsapp {
+    width: 48px;
+    height: 48px;
+    right: 14px;
+    bottom: 14px;
+    font-size: 24px;
+  }
 }
-.btn-lihat-katalog:hover { background-color: #000000 !important; color: #FFFFFF !important; }
+
+.product-accordion {
+  border-top: 1px solid #eaeaea;
+}
+.product-accordion:last-of-type {
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 40px;
+}
+.product-accordion summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  cursor: pointer;
+  list-style: none;
+  font:
+    700 18px "Montserrat",
+    sans-serif;
+  color: var(--ink);
+}
+.product-accordion summary::-webkit-details-marker {
+  display: none;
+}
+.product-accordion summary::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  transform: translateY(-3px) rotate(45deg);
+  transition: transform 0.3s;
+  margin-right: 8px;
+}
+.product-accordion[open] summary::after {
+  transform: translateY(3px) rotate(-135deg);
+}
+.product-accordion .accordion-content {
+  padding-bottom: 24px;
+}

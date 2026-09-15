@@ -6,14 +6,7 @@
 
 export { tools } from "./products";
 export { articles } from "./articles";
-export { team, locations } from "./company";
+export { locations } from "./company";
 export { problems } from "./problems";
 
-export type {
-  Tool,
-  Article,
-  TeamMember,
-  ContactLocation,
-  PriceComparison,
-  Problem,
-} from "@/types";
+export type { Tool, Article, ContactLocation, Problem } from "@/types";

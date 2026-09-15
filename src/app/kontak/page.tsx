@@ -1,8 +1,7 @@
-/**
- * HALAMAN KONTAK — /kontak
- * Menampilkan informasi kontak dan lokasi tim Maganghub.
- * Data lokasi diambil dari data/company.ts.
- */
+// NOTE:
+// Halaman Kontak (/kontak) — Informasi kontak dan lokasi tim.
+// Data lokasi diambil dari @/data/content (locations).
+
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingContact from "@/components/ui/FloatingContact";
@@ -22,9 +21,9 @@ export default function KontakPage() {
                 title="Ingin berpartisipasi dalam asesmen?"
               />
               <p>
-                Kami membutuhkan masukan dari petani, pelaku usaha, dan stakeholder
-                komoditas unggulan Indonesia. Interview Anda sangat berharga untuk
-                memunculkan ide dan solusi yang tepat sasaran.
+                Kami membutuhkan masukan dari petani, pelaku usaha, dan
+                stakeholder komoditas unggulan Indonesia. Interview Anda sangat
+                berharga untuk memunculkan ide dan solusi yang tepat sasaran.
               </p>
             </div>
             <div className="locations">
