@@ -32,18 +32,7 @@ export default async function ToolPage({
     <>
       <Header />
       <main className="product-page" style={{ paddingTop: "90px" }}>
-        <section className="tool-problem section" style={{ padding: "40px 0" }}>
-          <div className="container tool-problem-grid">
-            <div>
-              <p className="detail-kicker dark">Masalah yang Dihadapi Petani</p>
-              <h2>Mengapa Alat Ini Dibutuhkan?</h2>
-            </div>
-            <div className="problem-content">
-              <div className="problem-icon">⚠️</div>
-              <p>{tool.problem}</p>
-            </div>
-          </div>
-        </section>
+
 
         <section className="container product-story" style={{ marginTop: "0" }}>
           <div
