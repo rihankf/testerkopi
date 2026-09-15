@@ -27,12 +27,8 @@ export default function TentangPage() {
                 lineHeight: 1.8,
               }}
             >
-              Berdasarkan observasi pada rantai pengolahan pascapanen kopi,
-              kendala utama yang menghambat petani dalam mencapai kualitas dan
-              harga jual optimal terpusat pada tiga aspek yaitu proses
-              pengeringan yang sangat bergantung pada cuaca, keterbatasan alat
-              ukur kadar air yang presisi dan terjangkau, serta metode pemilahan
-              biji kopi pada sistem basah maupun kering.
+              Berdasarkan identifikasi permasalahan pascapanen kopi, 
+              terdapat tiga titik utama yang perlu mendapatkan perhatian: pengeringan, pengukuran kadar air, dan pemilahan kualitas biji.
             </p>
             <div
               className="timeline"
@@ -63,9 +59,8 @@ export default function TentangPage() {
                       lineHeight: 1.6,
                     }}
                   >
-                    Mengandalkan cuaca dan lahan terbatas. Saat musim hujan
-                    kadar air sulit turun (10-11%), menurunkan kualitas
-                    roasting.
+                    Ketergantungan pada sinar matahari menyebabkan proses pengeringan rentan terhadap perubahan cuaca. 
+                    Keterbatasan lahan dan kapasitas pengeringan juga menjadi hambatan bagi petani.
                   </p>
                 </div>
               </div>
@@ -86,8 +81,8 @@ export default function TentangPage() {
                       lineHeight: 1.6,
                     }}
                   >
-                    Alat presisi mahal. Pemeriksaan manual/feeling kurang akurat
-                    bagi petani baru, menyulitkan kontrol standar.
+                    Harga alat ukur yang relatif mahal membuat sebagian petani masih mengandalkan pemeriksaan manual atau berdasarkan pengalaman, 
+                    sehingga akurasi pengukuran menjadi tantangan.
                   </p>
                 </div>
               </div>
@@ -108,8 +103,8 @@ export default function TentangPage() {
                       lineHeight: 1.6,
                     }}
                   >
-                    Sistem kering campur biji kopong, sistem basah bisa misah
-                    tapi boros air & memperlambat proses kering ulang.
+                    Pemilahan dengan sistem kering sulit membedakan biji berdasarkan berat jenis, 
+                    sedangkan sistem basah membutuhkan banyak air dan memperpanjang proses pengeringan.
                   </p>
                 </div>
               </div>
@@ -139,31 +134,21 @@ export default function TentangPage() {
               </div>
               <div className="about-copy" style={{ paddingTop: "0" }}>
                 <p>
-                  Kopi bukan sekadar komoditas, kopi adalah bagian dari{" "}
-                  <strong>sejarah panjang budaya Indonesia</strong>. Sebagai
-                  produsen kopi terbesar ke-4 dunia, Indonesia menghasilkan
-                  sekitar 774.000 ton kopi per tahun dengan nilai ekspor
-                  mencapai USD 1,2 miliar. Produksi kopi melibatkan sekitar 1,9
-                  juta petani yang tersebar di 17 provinsi.
+                  Kopi tidak hanya memiliki nilai sebagai komoditas, tetapi juga melibatkan proses panjang dari budidaya, panen, pascapanen hingga roasting. 
+                  Berdasarkan hasil pembahasan, kendala utama petani justru banyak ditemukan pada tahap pascapanen, 
+                  terutama pada proses pengeringan, pengukuran kadar air, dan pemilahan kualitas biji kopi.
                 </p>
                 <p>
-                  Namun, terdapat{" "}
-                  <strong>
-                    gap besar antara harga potensial dan harga aktual
-                  </strong>{" "}
-                  yang diterima petani. Banyak petani menjual cherry atau asalan
-                  dengan harga rendah (Rp 8.000–12.000/kg) karena tidak memiliki
-                  alat dan pengetahuan untuk melakukan proses pasca panen yang
-                  baik. Padahal, kopi Arabika <i>specialty grade</i> bisa
-                  mencapai Rp 80.000–150.000/kg di level <i>green bean</i>.
+                  Proses pengeringan masih banyak mengandalkan sinar matahari secara langsung. 
+                  Kondisi cuaca, keterbatasan lahan, kapasitas pengeringan, serta biaya pembangunan fasilitas menjadi hambatan bagi petani. 
+                  Pada musim hujan, kadar air kopi juga lebih sulit diturunkan hingga kondisi optimal sekitar 10–11%.
                 </p>
-                <p>
-                  <strong>Masalah utama</strong> yang kami identifikasi adalah
-                  pada proses pascapanen, pengeringan tidak merata, sortasi
-                  manual yang lambat dan inkonsisten, serta tidak adanya kontrol
-                  kadar air yang akurat. Akibatnya, kualitas biji kopi menjadi
-                  tidak konsisten dan gagal memenuhi standar ekspor.
-                </p>
+                <p>Di sisi lain, alat pengukur kadar air memang telah tersedia, tetapi harganya relatif mahal. 
+                Akibatnya, sebagian petani masih menggunakan pemeriksaan manual berdasarkan sentuhan atau pengalaman, 
+                yang kurang akurat terutama bagi petani baru.
+                Pemilahan kualitas juga menjadi tantangan. Sistem kering lebih sederhana tetapi tidak mudah memisahkan biji berdasarkan berat jenis, 
+                sementara sistem basah membutuhkan banyak air dan dapat memperpanjang proses pengeringan.
+                  </p>
               </div>
             </div>
           </div>
@@ -180,9 +165,8 @@ export default function TentangPage() {
                 <div className="objective-number">01</div>
                 <h3>Identifikasi Kebutuhan</h3>
                 <p>
-                  Mengidentifikasi kebutuhan stakeholder melalui wawancara
-                  langsung dengan petani, pelaku usaha, dan pemangku kepentingan
-                  di rantai pasok kopi.
+                  Mengidentifikasi kebutuhan dan permasalahan stakeholder melalui wawancara serta penggalian informasi dari petani, 
+                  pelaku usaha, dan pihak terkait dalam rantai pasok kopi.
                 </p>
               </div>
               <div className="objective-card">
@@ -208,7 +192,7 @@ export default function TentangPage() {
                 <h3>Dokumen</h3>
                 <p>
                   Menyusun dokumen lengkap berisi solusi dan usulan berdasarkan
-                  kajian..
+                  kajian.
                 </p>
               </div>
             </div>

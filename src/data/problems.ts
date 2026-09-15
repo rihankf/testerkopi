@@ -3,27 +3,27 @@ import type { Problem } from "@/types";
 
 export const problems: Problem[] = [
   {
-    icon: "🌧️",
-    title: "Kendala Cuaca dalam Pengeringan",
+    icon: "☀️",
+    title: "01 — Pengeringan Bergantung pada Cuaca",
     description:
-      "Pengeringan masih banyak mengandalkan sinar matahari dengan cara menghamparkan kopi secara langsung. Kendala utama adalah cuaca, keterbatasan lahan, kapasitas pengeringan, dan tingginya biaya pembangunan fasilitas seperti greenhouse atau sun dryer.",
+      "Pengeringan masih banyak dilakukan dengan mengandalkan sinar matahari secara langsung. Cara ini menghadapi kendala berupa cuaca, keterbatasan lahan, kapasitas pengeringan, serta biaya pembangunan fasilitas seperti greenhouse atau sun dryer.",
     impact:
-      "Pada musim hujan, kadar air sulit diturunkan hingga kondisi optimal (10–11%). Jika dipaksakan masuk ke proses roasting saat kadar air tinggi, kualitas dan cita rasanya dapat menurun.",
+      "Pada musim hujan, kadar air kopi sulit diturunkan hingga sekitar 10–11%. Apabila kopi diproses lebih lanjut ketika kadar air masih terlalu tinggi, kualitas dan cita rasa dapat menurun.",
   },
   {
     icon: "💧",
-    title: "Pengukuran Kadar Air Tidak Akurat",
+    title: "02 — Pengukuran Kadar Air Belum Terjangkau",
     description:
-      "Alat pengukur kadar air sudah tersedia tetapi relatif mahal. Sebagian petani masih mengandalkan pemeriksaan manual/feeling berdasarkan sentuhan atau pengalaman yang kurang akurat, terutama bagi petani baru.",
+      "Alat pengukur kadar air sudah tersedia, tetapi harganya relatif mahal. Sebagian petani masih mengandalkan pemeriksaan manual atau feeling berdasarkan sentuhan dan pengalaman.",
     impact:
-      "Pengukuran yang lebih presisi terkadang baru dilakukan ketika kopi diperiksa oleh pengepul, menyebabkan petani kesulitan memprediksi dan mempertahankan standar kualitas.",
+      "Hasil pengukuran menjadi kurang presisi, terutama bagi petani baru. Pengukuran yang lebih akurat terkadang baru dilakukan ketika kopi diperiksa oleh pengepul.",
   },
   {
     icon: "⚖️",
-    title: "Kelemahan Sistem Pemilahan Kering",
+    title: "03 — Pemilahan Kualitas Biji Belum Optimal",
     description:
-      "Sistem pengolahan pascapanen kering lebih sederhana, tetapi tidak dapat dengan mudah memisahkan biji berdasarkan berat jenis sehingga biji yang baik dan biji kopong dapat tercampur.",
+      "Sistem kering lebih sederhana, tetapi tidak mudah memisahkan biji berdasarkan berat jenis sehingga biji berkualitas baik dan biji kopong dapat tercampur. Sistem basah mampu melakukan pemisahan berdasarkan berat jenis, tetapi membutuhkan banyak air dan kembali meningkatkan kadar air biji.",
     impact:
-      "Pemisahan yang kurang optimal membuat kualitas akhir biji kopi yang dihasilkan menjadi tidak merata.",
+      "Proses pengeringan menjadi lebih lama dan kualitas hasil pemilahan belum optimal.",
   },
 ];
