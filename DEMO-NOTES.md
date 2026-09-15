@@ -7,14 +7,14 @@
 
 ## 1. RINGKASAN PROYEK
 
-**Nama Proyek:** Teknologi Tepat Guna untuk Komoditas Unggulan Indonesia (fokus Kopi)  
-**Tim:** Maganghub (Hana, Putri, Aul, Rihan)  
+**Nama Proyek:** Teknologi Tepat Guna untuk Komoditas Unggulan Indonesia (fokus Kopi)
+
 **Mitra:** BPVP Bandung Barat (Kementerian Ketenagakerjaan)
 
 **Tujuan Website:**
 
 - Mengidentifikasi masalah pasca panen kopi yang dihadapi petani
-- Menyajikan katalog teknologi tepat guna yang sudah disurvei
+- Menyajikan katalog teknologi tepat guna
 - Memberikan rekomendasi alat dengan perbandingan harga dari pasaran
 - Menjadi dokumen digital hasil kajian yang bisa diakses stakeholder
 
@@ -63,7 +63,7 @@ alat-kopi/
 │   │   ├── teknologi/page.tsx     → Katalog Alat (search + filter kategori)
 │   │   ├── kontak/page.tsx        → Halaman Kontak
 │   │   ├── product/[slug]/        → Detail per alat (dynamic route)
-│   │   ├── [slug]/                → Detail per artikel (dynamic route)
+│   │   ├── artikel/[slug]/        → Detail per artikel (dynamic route)
 │   │   └── not-found.tsx          → Halaman 404
 │   ├── components/            ← KOMPONEN REUSABLE
 │   │   ├── layout/
@@ -72,12 +72,13 @@ alat-kopi/
 │   │   └── ui/
 │   │       ├── SectionHeading.tsx      → Heading section (eyebrow + title)
 │   │       ├── FloatingContact.tsx     → Tombol WhatsApp
-│   │       └── PriceComparisonTable.tsx → Tabel perbandingan harga
+│   │       ├── CatalogCard.tsx         → Kartu preview produk
+│   │       └── ProblemCard.tsx         → Kartu masalah pasca panen
 │   ├── data/                  ← DATA (sumber konten website)
 │   │   ├── products.ts            → Alat teknologi pengeringan & pengukuran
 │   │   ├── articles.ts            → 3 artikel kajian
 │   │   ├── problems.ts            → 3 masalah pasca panen
-│   │   ├── company.ts             → Data tim & lokasi kontak
+│   │   ├── company.ts             → Data lokasi kontak
 │   │   └── content.ts             → Barrel export (penghubung data)
 │   └── types/                 ← TYPE DEFINITIONS
 │       └── index.ts               → Kontrak data (Tool, Article, Problem, dll)
@@ -190,7 +191,7 @@ alat-kopi/
 
 ---
 
-### 5.7 Halaman Artikel (`/[slug]`)
+### 5.7 Halaman Artikel (`/artikel/[slug]`)
 
 **Yang ditampilkan:**
 
@@ -225,7 +226,7 @@ src/data/content.ts  ← Satu file yang re-export semua data
   ├── products.ts  (tools)
   ├── articles.ts  (articles)
   ├── problems.ts  (problems)
-  └── company.ts   (team, locations)
+  └── company.ts   (locations)
 ```
 
 Halaman cukup import dari `@/data/content` tanpa perlu tahu file sumber mana.
@@ -237,7 +238,7 @@ Layout Components (Header, Footer)
   → Dipakai di SEMUA halaman
   → Muncul di setiap page.tsx
 
-UI Components (SectionHeading, FloatingContact, PriceComparisonTable)
+UI Components (SectionHeading, FloatingContact, CatalogCard, ProblemCard)
   → Dipakai selektif sesuai kebutuhan halaman
 ```
 
@@ -278,7 +279,7 @@ npm run build
 | Produk/alat teknologi | `src/data/products.ts`                                  |
 | Artikel kajian        | `src/data/articles.ts`                                  |
 | Masalah pasca panen   | `src/data/problems.ts`                                  |
-| Tim & kontak          | `src/data/company.ts`                                   |
+| Kontak                | `src/data/company.ts`                                   |
 | Gambar                | Letakkan di `public/images/`, referensikan path di data |
 | Styling/warna         | `src/app/globals.css` (ubah CSS variables di `:root`)   |
 
