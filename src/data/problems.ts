@@ -1,11 +1,5 @@
 import type { Problem } from "@/types";
 
-// ══════════════════════════════════════════════════════════
-// IDENTIFIKASI MASALAH PASCA PANEN KOPI
-// Data ini ditampilkan di:
-//   - Homepage (section "Identifikasi Masalah")
-//   - Halaman Tentang (referensi konteks)
-// ══════════════════════════════════════════════════════════
 
 export const problems: Problem[] = [
   {

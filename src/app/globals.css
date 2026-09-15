@@ -1,30 +1,4 @@
-/*
- * NOTE — globals.css (Design System)
- * Struktur file ini:
- *   1. Tokens        — CSS custom properties (warna, radius, shadow, transition)
- *   2. Reset         — Box-sizing, body defaults, reset dasar
- *   3. Utilities     — Container, section padding, animasi (fadeInUp, scaleIn)
- *   4. Header        — Navigasi fixed, transparan di homepage, solid di inner page
- *   5. Hero          — Banner fullscreen homepage dengan overlay gradient
- *   6. Eyebrow/Heading — Label section + heading reusable (h2)
- *   7. Buttons       — Tombol global (solid & outline)
- *   8. Problems      — Kartu masalah pasca panen (homepage & tentang)
- *   9. About         — Layout 2 kolom gambar + narasi (tentang)
- *  10. Objectives    — Grid 4 kartu tujuan proyek (tentang)
- *  11. About CTA     — Tombol ajakan di bawah section tentang
- *  12. Catalog       — Grid katalog alat teknologi (homepage & teknologi)
- *  13. Timeline      — Rangkuman masalah dalam bentuk timeline (tentang)
- *  14. Contact       — Halaman kontak
- *  15. Footer        — Footer + Google Maps embed
- *  16. WhatsApp Float — Tombol kontak mengambang
- *  17. Product Detail — Halaman detail alat (hero, problem, specs, related)
- *  18. Article Detail — Halaman artikel kajian (hero, cover, konten, navigasi)
- *  19. Not Found     — Halaman 404
- *  20. Inner Pages   — Header solid + offset konten untuk halaman non-homepage
- *  21. Mitra         — Halaman mitra kerjasama (glassmorphism card)
- *  22. Responsive    — Tablet (≤900px) dan Mobile (≤600px)
- *  23. Accordion     — Accordion detail produk (deskripsi & spesifikasi)
- */
+
 
 :root {
   --ink: #4f200d;
