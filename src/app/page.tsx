@@ -30,7 +30,7 @@ export default function Home() {
             <p className="hero-copy">
               Mengidentifikasi kebutuhan stakeholder dan merekomendasikan solusi
               teknologi pengeringan, pemilahan, dan pengukuran untuk
-              meningkatkan kualitas kopi.
+              meningkatkan kualitas kopi
             </p>
             <div className="hero-actions">
               <Link className="button" href="/teknologi">
@@ -64,7 +64,7 @@ export default function Home() {
             >
               Pembahasan berfokus pada kendala utama petani yaitu pada proses
               pascapanen, terutama pada tahap pengeringan, pengukuran kadar air,
-              dan pemilahan kualitas biji kopi.
+              dan pemilahan kualitas biji kopi
             </p>
             <div
               className="problems-grid"

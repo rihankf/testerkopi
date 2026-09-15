@@ -28,7 +28,7 @@ export default function TentangPage() {
               }}
             >
               Berdasarkan identifikasi permasalahan pascapanen kopi, 
-              terdapat tiga titik utama yang perlu mendapatkan perhatian: pengeringan, pengukuran kadar air, dan pemilahan kualitas biji.
+              terdapat tiga titik utama yang perlu mendapatkan perhatian: pengeringan, pengukuran kadar air, dan pemilahan kualitas biji
             </p>
             <div
               className="timeline"
@@ -134,20 +134,19 @@ export default function TentangPage() {
               </div>
               <div className="about-copy" style={{ paddingTop: "0" }}>
                 <p>
-                  Kopi tidak hanya memiliki nilai sebagai komoditas, tetapi juga melibatkan proses panjang dari budidaya, panen, pascapanen hingga roasting. 
-                  Berdasarkan hasil pembahasan, kendala utama petani justru banyak ditemukan pada tahap pascapanen, 
-                  terutama pada proses pengeringan, pengukuran kadar air, dan pemilahan kualitas biji kopi.
+                  Kopi melalui proses panjang mulai dari budidaya, panen, pascapanen, hingga roasting. 
+                  Pada tahap pascapanen, petani masih menghadapi beberapa kendala utama, terutama dalam pengeringan, pengukuran kadar air, dan pemilahan kualitas biji kopi. 
+                  Ketiga hal tersebut menjadi bagian penting karena menentukan kondisi biji sebelum masuk ke tahap pengolahan berikutnya.
                 </p>
                 <p>
-                  Proses pengeringan masih banyak mengandalkan sinar matahari secara langsung. 
-                  Kondisi cuaca, keterbatasan lahan, kapasitas pengeringan, serta biaya pembangunan fasilitas menjadi hambatan bagi petani. 
-                  Pada musim hujan, kadar air kopi juga lebih sulit diturunkan hingga kondisi optimal sekitar 10–11%.
+                  Proses pengeringan masih banyak mengandalkan sinar matahari dengan cara menghamparkan kopi secara langsung, sehingga sangat dipengaruhi oleh cuaca, keterbatasan lahan, kapasitas pengeringan, dan biaya fasilitas seperti greenhouse atau sun dryer. 
+                  Pada musim hujan, kadar air kopi lebih sulit diturunkan hingga sekitar 10–11%. Sementara itu, alat pengukur kadar air yang tersedia masih relatif mahal, sehingga sebagian petani mengandalkan sentuhan atau pengalaman untuk memperkirakan kondisi biji. 
+                  Cara ini kurang akurat, terutama bagi petani baru.
                 </p>
-                <p>Di sisi lain, alat pengukur kadar air memang telah tersedia, tetapi harganya relatif mahal. 
-                Akibatnya, sebagian petani masih menggunakan pemeriksaan manual berdasarkan sentuhan atau pengalaman, 
-                yang kurang akurat terutama bagi petani baru.
-                Pemilahan kualitas juga menjadi tantangan. Sistem kering lebih sederhana tetapi tidak mudah memisahkan biji berdasarkan berat jenis, 
-                sementara sistem basah membutuhkan banyak air dan dapat memperpanjang proses pengeringan.
+                <p>
+                  Pada pemilahan kualitas, sistem kering lebih sederhana tetapi belum mudah memisahkan biji berdasarkan berat jenis, sehingga biji dapat tercampur. 
+                  Sistem basah dapat memisahkan berdasarkan berat jenis. Biji yang tenggelam cenderung memiliki kualitas lebih baik, sedangkan yang mengapung cenderung lebih rendah atau kopong. 
+                  Karena itu, terdapat peluang untuk mengembangkan metode pemilahan berdasarkan berat jenis tanpa penggunaan air dalam jumlah besar.
                   </p>
               </div>
             </div>
@@ -189,9 +188,9 @@ export default function TentangPage() {
               </div>
               <div className="objective-card">
                 <div className="objective-number">04</div>
-                <h3>Dokumen</h3>
+                <h3>Katalog</h3>
                 <p>
-                  Menyusun dokumen lengkap berisi solusi dan usulan berdasarkan
+                  Menyusun katalog lengkap berisi solusi dan usulan berdasarkan
                   kajian.
                 </p>
               </div>

@@ -6,7 +6,7 @@ export const problems: Problem[] = [
     icon: "☀️",
     title: "01 — Pengeringan Bergantung pada Cuaca",
     description:
-      "Pengeringan masih banyak dilakukan dengan mengandalkan sinar matahari secara langsung. Cara ini menghadapi kendala berupa cuaca, keterbatasan lahan, kapasitas pengeringan, serta biaya pembangunan fasilitas seperti greenhouse atau sun dryer.",
+      "Pengeringan masih banyak dilakukan dengan mengandalkan sinar matahari secara langsung. Cara ini menghadapi kendala berupa cuaca, keterbatasan lahan, kapasitas pengeringan, serta biaya pembangunan fasilitas seperti <i>greenhouse</i> atau <i>sun dryer</i>.",
     impact:
       "Pada musim hujan, kadar air kopi sulit diturunkan hingga sekitar 10–11%. Apabila kopi diproses lebih lanjut ketika kadar air masih terlalu tinggi, kualitas dan cita rasa dapat menurun.",
   },
