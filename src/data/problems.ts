@@ -14,7 +14,7 @@ export const problems: Problem[] = [
     icon: "💧",
     title: "Pengukuran Kadar Air Belum Terjangkau",
     description:
-      "Alat pengukur kadar air sudah tersedia, tetapi harganya relatif mahal. Sebagian petani masih mengandalkan pemeriksaan manual berdasarkan sentuhan dan pengalaman.",
+      "Alat pengukur kadar air sudah tersedia, tetapi harganya relatif mahal. Sebagian petani masih mengandalkan pemeriksaan manual berdasarkan pengalaman.",
     impact:
       "Hasil pengukuran menjadi kurang presisi, terutama bagi petani baru. Pengukuran yang lebih akurat terkadang baru dilakukan ketika kopi diperiksa oleh pengepul.",
   },
