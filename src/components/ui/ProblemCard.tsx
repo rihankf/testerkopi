@@ -14,7 +14,7 @@ export default function ProblemCard({ problem }: ProblemCardProps) {
         {problem.icon}
       </div>
       <h3>{problem.title}</h3>
-      <p>{problem.description}</p>
+      <p dangerouslySetInnerHTML={{ __html: problem.description }} />
       <div className="problem-impact">
         <strong>Dampak:</strong> {problem.impact}
       </div>

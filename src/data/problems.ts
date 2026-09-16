@@ -4,7 +4,7 @@ import type { Problem } from "@/types";
 export const problems: Problem[] = [
   {
     icon: "☀️",
-    title: "01 — Pengeringan Bergantung pada Cuaca",
+    title: "Pengeringan Bergantung pada Cuaca",
     description:
       "Pengeringan masih banyak dilakukan dengan mengandalkan sinar matahari secara langsung. Cara ini menghadapi kendala berupa cuaca, keterbatasan lahan, kapasitas pengeringan, serta biaya pembangunan fasilitas seperti <i>greenhouse</i> atau <i>sun dryer</i>.",
     impact:
@@ -12,7 +12,7 @@ export const problems: Problem[] = [
   },
   {
     icon: "💧",
-    title: "02 — Pengukuran Kadar Air Belum Terjangkau",
+    title: "Pengukuran Kadar Air Belum Terjangkau",
     description:
       "Alat pengukur kadar air sudah tersedia, tetapi harganya relatif mahal. Sebagian petani masih mengandalkan pemeriksaan manual atau feeling berdasarkan sentuhan dan pengalaman.",
     impact:
@@ -20,7 +20,7 @@ export const problems: Problem[] = [
   },
   {
     icon: "⚖️",
-    title: "03 — Pemilahan Kualitas Biji Belum Optimal",
+    title: "Pemilahan Kualitas Biji Belum Optimal",
     description:
       "Sistem kering lebih sederhana, tetapi tidak mudah memisahkan biji berdasarkan berat jenis sehingga biji berkualitas baik dan biji kopong dapat tercampur. Sistem basah mampu melakukan pemisahan berdasarkan berat jenis, tetapi membutuhkan banyak air dan kembali meningkatkan kadar air biji.",
     impact:
