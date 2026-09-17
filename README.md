@@ -1,6 +1,6 @@
 # KATALOG TEKNOLOGI KOPI
 
-Rekomendasi teknologi alat pasca panen komoditas unggulan kopi Indonesia.
+Rekomendasi teknologi alat pasca panen komoditas unggulan kopi Indonesia
 
 **Deskripsi Proyek:**
 Merupakan platform rekomendasi solusi teknologi pasca panen kopi, khususnya pada tahap pengeringan, pengukuran, dan pemilahan. Menyajikan daftar alat yang dilengkapi dengan spesifikasi lengkap, rentang harga serta link pembelian. Berdasarkan identifikasi masalah petani kopi, aplikasi ini merekomendasikan alat yang tepat guna untuk meningkatkan kualitas biji kopi.
