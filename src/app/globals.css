@@ -1,5 +1,6 @@
 
 
+
 :root {
   --ink: #4f200d;
   --green: #ff9a00;
@@ -27,8 +28,7 @@
 *::after {
   box-sizing: border-box;
 }
-html {
-}
+
 body {
   margin: 0;
   color: var(--ink);
@@ -384,7 +384,7 @@ body:has(.home-page) .site-header::before {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.85;
-  text-align:justify;
+  text-align: justify;
 }
 .about-copy p {
   margin: 0 0 18px;
@@ -831,7 +831,7 @@ body:has(.home-page) .site-header::before {
 
 .product-story {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: start;
@@ -874,7 +874,7 @@ body:has(.home-page) .site-header::before {
 }
 
 .related-section {
-  padding-top: 50px;
+  padding-top: 0px;
   padding-bottom: 50px;
 }
 .related-heading {

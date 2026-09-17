@@ -35,10 +35,7 @@ export default async function ToolPage({
 
 
         <section className="container product-story" style={{ marginTop: "0" }}>
-          <div
-            className="product-showcase"
-            style={{ position: "sticky", top: "110px" }}
-          >
+          <div className="product-showcase">
             <div className="product-main-image">
               <Image
                 src={tool.image}
@@ -160,7 +157,7 @@ export default async function ToolPage({
 
         <section
           className="related-section container"
-          style={{ marginTop: "60px", marginBottom: "60px" }}
+          style={{ marginTop: "0", marginBottom: "60px" }}
         >
           <div className="related-heading">
             <div>
