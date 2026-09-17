@@ -5,7 +5,7 @@ export default function FloatingContact() {
       <div className="whatsapp-tooltip">WhatsApp</div>
       <a
         className="whatsapp"
-        href="https://wa.me/6285881551430"
+        href="https://wa.me/6281224562580"
         aria-label="Chat on WhatsApp"
       >
         <svg

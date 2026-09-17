@@ -145,7 +145,7 @@ export const tools: Tool[] = [
     problem:
       "Alat ukur relatif mahal sehingga petani masih banyak mengandalkan pemeriksaan manual.",
     description:
-      "Alat pengukur genggam profesional buatan Finlandia yang berbasis kapasitansi (sel dielektrik tertutup). Alat ini berbentuk tabung silinder kecil yang tangguh dengan kapasitas sampel sekitar 90-110 mL, dilengkapi piston penutup berulir.",
+      "Alat pengukur buatan Finlandia yang berbasis kapasitansi (sel dielektrik tertutup). Alat ini berbentuk tabung silinder kecil yang tangguh dengan kapasitas sampel sekitar 90-110 mL, dilengkapi piston penutup berulir.",
     priceRange: "Rp. 9.500.000.-",
     buyLink:
       "https://shopee.co.id/WILE-Coffee-and-Cocoa-Moisture-Meter-kadar-air-biji-kopi-dan-coklat-i.311038107.23082306940",

@@ -384,6 +384,7 @@ body:has(.home-page) .site-header::before {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.85;
+  text-align:justify;
 }
 .about-copy p {
   margin: 0 0 18px;

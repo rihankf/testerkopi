@@ -28,7 +28,7 @@ export default function TentangPage() {
               }}
             >
               Berdasarkan identifikasi permasalahan pascapanen kopi, 
-              terdapat tiga titik utama yang perlu mendapatkan perhatian: pengeringan, pengukuran kadar air, dan pemilahan kualitas biji
+              terdapat tiga masalah utama: pengeringan, pengukuran kadar air, dan pemilahan kualitas biji
             </p>
             <div
               className="timeline"
